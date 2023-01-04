@@ -1,0 +1,24 @@
+*{padding: 0; margin: 0;}
+
+:root{
+    background: rgb(17, 11, 17);
+    color: #fff;
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    -webkit-mask-image: linear-gradient(160deg, rgba(11, 11, 17, 0.8), transparent);
+    background-image: url("../img/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+
+    object-fit: fill;
+
+    color: var(--color);
+    font-family: sans-serif;
+}
