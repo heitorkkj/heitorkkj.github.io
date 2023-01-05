@@ -20,3 +20,11 @@ let abrirMenu = () => {
     }
     
 }
+
+$(document).ready(() => {
+	
+    $('#btn-sobre').on('click', () =>{
+        $('#sobre').load('README.md')
+    })
+
+})
