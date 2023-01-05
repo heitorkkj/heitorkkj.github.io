@@ -1,7 +1,7 @@
 *{padding: 0; margin: 0;}
 
 :root{
-    background: rgb(17, 11, 17);
+    background-color: #14131b;
     color: #fff;
 }
 
@@ -11,8 +11,7 @@ body{
     height: 100vh;
     overflow: hidden;
 
-    -webkit-mask-image: linear-gradient(160deg, rgba(11, 11, 17, 0.8), transparent);
-    background-image: url("../img/back.jpg");
+    background-image: url("../img/back.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center; 
@@ -21,4 +20,141 @@ body{
 
     color: var(--color);
     font-family: sans-serif;
+}
+
+nav{
+    width: 100vw;
+    height: 50px;
+    color:white;
+
+    padding: 10px 0 0 0;
+}
+
+nav span{
+    display: flex;
+    float: left;
+    align-items: center;
+    width: 50px;
+    padding: 10px 0 0 10%;
+    font-size: 1.7em;
+    color: #ba24ff;
+}
+
+#menu-principal{
+    float: right;
+    padding: 10px 10% 0 0;
+
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    list-style: none;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+nav ul li{
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li > a{
+    text-decoration: none;
+    color:white;
+    transition: all 0.8s;
+
+    border-radius: 5px;
+}
+
+nav ul li > a > i{
+    padding: 4px;
+}
+
+nav ul li:hover > a{
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+}
+
+.btn-menu{
+    border:none;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+    padding: 0 0 0 10px;
+
+    font-size: 1.3em;
+    width: 50px;
+    height: 30px;
+
+    background-color: #a707f1b3;
+    color:#f107f1;
+}
+
+.btn-menu i{
+    font-style: normal;
+}
+
+#menu-drop{
+    display: none;
+}
+
+@media (max-width: 700px){
+    nav ul{
+        padding: 10px 5px 0 0;
+    }
+}
+
+@media (max-width: 600px){
+
+    #menu-principal{
+        display: none;
+    }
+
+    #menu-drop{
+        display: block;
+    }
+
+    .active{
+        display: flex !important;
+    }
+    
+    #menu-principal{
+        float: none;
+        padding: 0 0 0 0;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+
+        list-style: none;
+        font-weight: 100;
+        font-size: 1.5em;
+        height: 100vh;
+        width: 100vw;
+        background-color: #14131b;
+        transition: all 0.4s;
+    }
+
+    .btn-menu-drop{
+        border:none;
+        border-radius: 5px;
+        float: right;
+        margin: 10px 10px 0 0 ;
+    
+        font-size: 1.3em;
+        width: 50px;
+        height: 30px;
+    
+        background-color: #a707f1b3;
+        color:#fff;
+    }
+
+    .btn-menu{
+        display:none;
+    }
 }
