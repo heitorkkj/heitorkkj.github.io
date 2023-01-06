@@ -104,6 +104,58 @@ nav ul li:hover > a{
     display: none;
 }
 
+/*        Main       */
+
+#area-sobre{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#sobre{
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+#sobre h1, 
+h2,
+h3{
+   margin-left: 25%;
+   font-weight: 100;
+   transition: all 0.8s;
+   transition-duration: 1s;
+   transition-timing-function: linear;
+}
+
+#sobre h1{
+   color:#db44fd;
+   padding-top: 10px;
+   padding-bottom:30px;
+}
+
+#sobre h3{ 
+   color:#db44fd;
+}
+
+#icone{
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+#icone img{
+   width: 40%;
+   height: 40%;
+   object-fit: fill;
+}
+
 @media (max-width: 700px){
     #menu-principal{
         padding: 10px 5px 0 0;
@@ -128,10 +180,7 @@ nav ul li:hover > a{
         position: fixed;
         justify-content: center;
         align-items: center;
-        gap:20px;
 
-        list-style: none;
-        font-weight: 100;
         font-size: 1.5em;
         height: 100vh;
         width: 100vw;
@@ -158,6 +207,19 @@ nav ul li:hover > a{
         display:none;
     }
 
+    #icone{
+        display: none;
+    }
+
+    #sobre{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
     #icone img{
         display: none;
     }
@@ -168,58 +230,7 @@ nav ul li:hover > a{
     }
 }
 
-/* Main */
 
-#area-sobre{
-     width: 100%;
-     height: 100%;
-     display: flex;
-}
-
-#sobre{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-   
-}
-
-#sobre h1, 
-h2,
-h3{
-    margin-left: 25%;
-    font-weight: 100;
-    transition: all 0.8s;
-    transition-duration: 1s;
-    transition-timing-function: linear;
-}
-
-#sobre h1{
-    color:#db44fd;
-    padding-top: 10px;
-    padding-bottom:30px;
-}
-
-#sobre h3{ 
-    color:#db44fd;
-}
-
-#icone{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#icone img{
-    width: 40%;
-    height: 40%;
-    object-fit: fill;
-}
 
 footer ul{
     height: 70px;

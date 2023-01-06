@@ -1,14 +1,14 @@
 let ola = ['Hello welcome!👋','Hola es bienvenido!👋','Olá seja bem-vindo!👋']
 let x = 0
-setInterval(()=>{
+meuIntervalo = setInterval(()=>{
     apresentacao = document.getElementById('bemVindo') 
     apresentacao.innerHTML = ola[x]
     if(ola[x] === 'Olá seja bem-vindo!👋'){
-
+        clearInterval(meuIntervalo);
     }else{
         x++
     }
-}, 1000)
+}, 1500)
 
 let curtir = () =>{
     heart = document.getElementById('heart'); 
@@ -36,7 +36,7 @@ let abrirMenu = () => {
 $(document).ready(() => {
 	
     $('#btn-sobre').on('click', () =>{
-        $('#sobre').load('README.md')
+        $('#sobre').load('sobre.md')
     })
 
 })
