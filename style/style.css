@@ -274,10 +274,12 @@ footer ul{
 }
 
 @media (max-width: 500px){
+
     footer ul{
         height: 70px;
         width: 100%;
         border-radius: 10px;
+        margin: 0 0 0 0;
         gap: 10px;
     }
 
