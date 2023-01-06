@@ -191,6 +191,9 @@ h2,
 h3{
     margin-left: 25%;
     font-weight: 100;
+    transition: all 0.8s;
+    transition-duration: 1s;
+    transition-timing-function: linear;
 }
 
 #sobre h1{
