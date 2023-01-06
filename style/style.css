@@ -285,3 +285,16 @@ footer ul{
         font-size: 1.2em;
     }
 }
+
+@media (max-width: 350px){
+    footer ul{
+        height: 70px;
+        width: 100%;
+        border-radius: 10px;
+        gap: 10px;
+    }
+
+    .btn-footer{
+        font-size: 1em;
+    }
+}
