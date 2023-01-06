@@ -27,7 +27,7 @@
                     </button>
                 </li>
                 <li>
-                    <a href="#"><i class="bi bi-house"></i>Home</a>
+                    <a href="index.html"><i class="bi bi-house"></i>Home</a>
                 </li>
                 <li id="btn-sobre">
                     <a href="#"><i class="bi bi-person"></i>Sobre</a>
@@ -36,7 +36,7 @@
                     <a href="#"><i class="bi bi-unity"></i>Projetos</a>
                 </li>
                 <li>
-                    <a href="#"><i class="bi bi-envelope"></i>Contato</a>
+                    <a href="#contato"><i class="bi bi-envelope"></i>Contato</a>
                 </li>
                 <li>
                     <button class="btn-menu" onclick="curtir()">
@@ -46,7 +46,7 @@
             </ul>
     </nav>
 
-    <div id="home">
+    <div id="area-sobre">
         
         <div id="sobre">
                 <h2>Olá seja bem-vindo!👋</h2>
@@ -59,6 +59,26 @@
         </div>
 
     </div>
+
+    <footer id="contato">
+        <ul>
+            <li>
+                <button class="btn-footer"><a href="https://github.com/Heitor548"><i class="bi bi-github"></i></a></button>
+            </li>
+            <li>
+                <button class="btn-footer"><a href="https://www.instagram.com/heitorsantos548/"><i class="bi bi-instagram"></i></a></button>
+            </li>
+            <li>
+                <button class="btn-footer"><a href="https://www.linkedin.com/in/heitor-santos-alves/"><i class="bi bi-linkedin"></i></a></button>
+            </li>
+            <li>
+                <button class="btn-footer" onclick="email()">
+                    <i class="bi bi-envelope-at-fill"></i>
+                </button>
+                <span id="email-texto"></span>
+            </li>
+        </ul>
+    </footer>
 
 
     <script src="script.js"></script>
