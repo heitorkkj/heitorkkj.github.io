@@ -52,3 +52,19 @@ let email = () =>{
     }
 }
 
+$(document).ready(() => {
+	
+    $('#linguagem-php').on('click', () =>{
+        $('#cards').load('projetosPhp.md')
+    })
+
+})
+
+$(document).ready(() => {
+	
+    $('#linguagem-js').on('click', () =>{
+        $('#cards').load('./card-test/card.html')
+    })
+
+})
+

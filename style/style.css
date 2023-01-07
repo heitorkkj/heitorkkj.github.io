@@ -167,6 +167,10 @@ h3{
         display: block;
     }
 
+    nav span{
+        padding: 10px 0 0 30px;
+    }
+
     .active{
         display: flex !important;
     }
@@ -220,6 +224,13 @@ h3{
         justify-content: center;
     }
 
+    #sobre h1, 
+    h2,
+    h3{
+    margin-left: 30px;
+
+    }
+
     #icone img{
         display: none;
     }
@@ -230,7 +241,49 @@ h3{
     }
 }
 
+/*  card  */
 
+#area-projetos{
+    margin: 0 0 0 30px;
+}
+
+.controle-linguagem{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:10px 
+}
+
+.controle-linguagem h1{
+    font-size: 1.9em;
+    font-weight: 100;
+}
+
+.controle-linguagem button{
+    border: none;
+    background-color: inherit;
+    color: #ba24ff;
+    font-size: 1.5em;
+    font-weight: 100;
+    transition: all 0.4s;
+    border-radius:5px;
+}
+
+.controle-linguagem button:hover{
+    background-color: #ba24ff;
+    color: inherit;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+/*  rodape  */
 
 footer ul{
     height: 70px;

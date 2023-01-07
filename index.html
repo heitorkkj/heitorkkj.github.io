@@ -30,13 +30,13 @@
                     <a href="index.html"><i class="bi bi-house"></i>Home</a>
                 </li>
                 <li id="btn-sobre">
-                    <a href="#"><i class="bi bi-person"></i>Sobre</a>
+                    <a href="#sobre" onclick="abrirMenu()"><i class="bi bi-person"></i>Sobre</a>
                 </li>
                 <li>
-                    <a href="#"><i class="bi bi-unity"></i>Projetos</a>
+                    <a href="#area-projetos"  onclick="abrirMenu()"><i class="bi bi-unity"></i>Projetos</a>
                 </li>
                 <li>
-                    <a href="#contato"><i class="bi bi-envelope"></i>Contato</a>
+                    <a href="#contato" onclick="abrirMenu()"><i class="bi bi-envelope"></i>Contato</a>
                 </li>
                 <li>
                     <button class="btn-menu" onclick="curtir()">
@@ -58,6 +58,19 @@
             <img src="./img/img-dev.svg"/>
         </div>
 
+    </div>
+
+    <div id="area-projetos">
+
+        <div class="controle-linguagem">
+            <h1>Projetos</h1>
+            <button id="linguagem-js">JavaScript</button>
+            <button id="linguagem-php">PHP</button>
+        </div>
+
+        <div id="cards">
+            
+        </div>
     </div>
 
     <footer id="contato">
