@@ -243,10 +243,6 @@ h3{
 
 /*  card  */
 
-#area-projetos{
-    margin: 0 0 0 30px;
-}
-
 .controle-linguagem{
     display: flex;
     flex-direction: row;
@@ -288,7 +284,7 @@ h3{
 footer ul{
     height: 70px;
     width: 50%;
-    margin: 0 25% 0 25%;
+    margin: 50px 25% 0 25%;
     border-radius: 10px;
 
     display: flex;
@@ -319,7 +315,7 @@ footer ul{
 }
 
 .btn-footer:hover{
-    transform: scale(1.5);
+    transform: scale(1.3);
 }
 
 @media (max-width: 780px){
