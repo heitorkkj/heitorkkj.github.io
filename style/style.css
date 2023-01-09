@@ -21,6 +21,10 @@ body,html{
     font-family: sans-serif;
 }
 
+#div{
+    width: 100%;
+    height: 100%;
+}
 /* Menu */
 nav{
     width: 100%;
