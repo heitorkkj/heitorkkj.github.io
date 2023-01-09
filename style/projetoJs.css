@@ -143,3 +143,22 @@ body,html{
     transform: rotate(-90deg);
 }
 
+@media (width < 900px){
+    .cards{
+        flex-direction: column;
+    }
+
+    .card{
+        width: 80%;
+        height: 80%;
+    }
+
+    .btn-verMais a{
+        transform: none;
+    }
+
+    .btn-verMais{
+        width:90%;
+        height: 46px;
+    }
+}

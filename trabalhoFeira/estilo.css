@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #272727;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1c1a3e;
+
+}
+
+.cabecalho-menu-item {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: aliceblue;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
+    font-family: 'Manrope', sans-serif;
+
+}
+
+.logo {
+    justify-content: space-around;
+    height: 10vh;
+    margin: 10px;
+}
+
+.arrumar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    align-self: flex-start;
+    padding-bottom: 10px;
+
+}
+
+.taxa {
+    width: 4%;
+}
+
+.caixa {
+    border-radius: 10px;
+    width: 30%;
+    height: 650px;
+    margin-top: 7px;
+    margin-right: 7px;
+    display: flex;
+    flex-direction: column;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.cow,
+.cow-1 {
+    display: flex;
+    flex-direction: column;    
+    height: 325px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*Primeira coluna*/     
+.row-1,
+.row-2{
+    align-self: center;
+    width: 95%;
+    height: 125px;
+    margin-top: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+}
+.taxa{
+    margin-top: 10px;
+    margin-left: 50%;
+    color:white;
+    font-weight: 700;
+}
+/*Segunda coluna e botoes*/ 
+#h1-botao{
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #F2F2F2;
+    text-align: center;
+}
+.cow-1{
+    display:flex; 
+    flex-direction: row;
+}
+.botao-medidas,
+.botao-medidas-1{
+    height: 40px;
+    font-size: 1em;
+    margin: 30px 22px 10px; 
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.botao-medidas{
+    width: 60%;
+    border-radius: 5px;
+    border: none;    
+}
+.botao-medidas:hover,
+.botao-medidas-1:hover{
+    background:linear-gradient(to bottom, rgb(211, 211, 211) 5%, #bebcb5 100%);
+    box-shadow: 1px 1px 1px 1px rgb(136, 136, 136);
+	background-color:#ccc2a6;
+}
+.botao-medidas:active,
+.botao-medidas-1:active {
+	position:relative;
+	top:1px;
+}
+.botao-medidas-1{
+    width: 60%;    
+}
+.botao-row{
+    width: 70%;
+}
+.botao-row-1{
+    width: 30%;
+}
+svg{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+img{
+    color: white;
+    width: 30%;
+    height: 26px; 
+    margin-right: 10px; 
+}
+    
+p{
+    color: #292929;
+}
+    
+
+.imagem-caixa {
+    padding-top: 15px;
+    padding-left: 25px;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.texto-caixa {
+    text-align: center;
+    margin-top: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+}
+
+#texto-caixa-desc {
+    color: #F2F2F2;
+    padding: 10px;
+}
+
+#botao {
+    width: 60%;
+    height: 35px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, Orgba(0, 0, 0, 0. 05), #edf1f4);
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.range ::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #0074cf;
+    cursor: pointer;
+}
+
+
+#rangeValue,
+#rangeValue2,
+#rangeValue3,
+#rangeValue4 {
+    position: relative;
+    text-align: center;
+    width: 160px;
+    height: 25px;
+    font-size: 1.25em;
+    color: #fff;
+    background: #27a0ff;
+    margin-left: 15px;
+    border-radius: 25px;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+#tipo {
+    color: #fff;
+    margin-left: 40%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
