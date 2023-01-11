@@ -55,7 +55,7 @@ let email = () =>{
 $(document).ready(() => {
 	
     $('#linguagem-php').on('click', () =>{
-        $('#cards').load('./card-test/projetosPhp.html')
+        $('#cards').load('./card/projetosPhp.html')
     })
 
 })
@@ -63,7 +63,7 @@ $(document).ready(() => {
 $(document).ready(() => {
 	
     $('#linguagem-js').on('click', () =>{
-        $('#cards').load('./card-test/projetosJs.html')
+        $('#cards').load('./card/projetosJs.html')
     })
 
 })

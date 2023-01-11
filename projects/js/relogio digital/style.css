@@ -1,0 +1,65 @@
+h1 {
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center top;
+    color: black;
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center top;
+    color: rgba(0, 0, 0, 0.562);
+    margin: 0 auto;
+
+}
+
+p {
+    margin-top: 100px;
+}
+
+hr {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: rgb(211, 211, 214);
+}
+
+#relogio {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+    height: 600px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    backdrop-filter: blur(16px) saturate(176%);
+    -webkit-backdrop-filter: blur(16px) saturate(176%);
+    background-color: rgb(255, 255, 255);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border-radius: 22px;
+    background: rgb(255, 255, 255);
+    box-shadow: 28px 28px 56px #6d6d6d,
+        -28px -28px 56px #ffffff;
+}
+
+#clock {
+    text-align: center;
+    font-size: 190px;
+    color: rgb(5, 5, 5);
+    background-color: rgba(211, 211, 214, 0.925);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    border-radius: 50px;
+}

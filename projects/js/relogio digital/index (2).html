@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="img/favicon.png" type="image/png" sizes="32x32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Horário Digital</title>
+</head>
+
+<body>
+    <div id="relogio">
+        <h1><b>Horário de Brasília</b></h1>
+        <h2>Seja Bem-Vindo ao Relógio digital de acordo com a hora oficial do Brasil 🇧🇷</h2>
+        <hr>
+        <script language="javascript">
+            const today = new Date();
+            document.write(new Intl.DateTimeFormat('pt-BR', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            }).format(today));
+        </script>
+        <div id="clock"></div>
+        <p>
+            <hr>
+            <h2>Desenvolvido por Heitor Santos</h2>
+        </p>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
