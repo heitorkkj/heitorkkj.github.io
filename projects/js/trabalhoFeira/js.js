@@ -1,3 +1,14 @@
+   let resizeWindow = () =>{
+        let largura = window.innerWidth
+        let altura = window.innerHeight
+        let container = document.querySelector('.container')
+
+        if(largura < 1310){
+            container.innerHTML = ''
+            container.innerHTML = `<div class="responsiv"><img src="./imagens/fixing.svg"/>Simulador não disponivel para mobile!</div>`
+        }
+   }
+   
    
    google.charts.load('current', {'packages': ['geochart'],/*Note: if your chart requires geocoding or uses nonstandard codes, you'll// need to get a mapsApiKey for your project. The one below won't work.// See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings*/'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'});google.charts.load('current', {'packages': ['geochart'],});google.charts.setOnLoadCallback(drawRegionsMap);
     var naf = calculaPessoas('naf');
@@ -25,10 +36,16 @@
     var taxa = 3.18;
 
     function popSaudavel(total, taxa){
+
         var contam = 1000000*taxa; 
         total = total - contam;
-        console.log(taxa) 
-        return total; 
+        if(total <= 0){
+            total = 0
+            return total
+        }else{
+            return total;
+        }
+        
     }
     
     function enableMascara() {
@@ -90,7 +107,7 @@
         var options = {
             displayMode: 'region',
             resolution: 'subcontinents',
-            colorAxis: {minValue: -10000000 ,maxValue:100000000,colors: ['red','#00BFFF','#00B2EE','#009ACD','#00688B'],},
+            colorAxis: {minValue: 0 ,maxValue:100000000,colors: ['red','#00BFFF','#00BFFF','#00BFFF','#00BFFF','#00BFFF','#00BFFF','#00688B','#00688B','#00688B','#00688B','#00688B'],},
             backgroundColor: '#272727',is3D: true,defaultColor: '#FF0000',};
 
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));chart.draw(data, options);
@@ -126,7 +143,8 @@
           'mcn': 116255,
           'pln': 311603
         } 
-        return Math.round(pessoas[id])}
+        return Math.round(pessoas[id])
+    }
 
     
 
