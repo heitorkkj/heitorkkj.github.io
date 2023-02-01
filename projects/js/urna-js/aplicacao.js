@@ -1,3 +1,14 @@
+let resizeWindow = () =>{
+    let largura = window.innerWidth
+    let altura = window.innerHeight
+    let container = document.querySelector('.container')
+
+    if(largura < 1310){
+        container.innerHTML = ''
+        container.innerHTML = `<div class="responsiv"><img src="./img/fixing.svg"/>Simulador não disponivel para mobile!</div>`
+    }
+}
+
 alert("Bem-Vindo ao software de treinamento da urna eletronica. Vale lembrar que este programa é uma simulação, logo, pode não conter todas as funcionalidades. Versão: 1° turno eleições municipais - vereador e prefeito.");
 alert("Opções de candidato: vereador: 92002 - Sertanejo | vereador: 92001 - Rock | prefeito: 92 - Heavy Metal")
 //selecionando elementos do html

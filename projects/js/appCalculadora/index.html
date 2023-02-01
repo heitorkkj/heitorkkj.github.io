@@ -2,55 +2,47 @@
 	<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="estilo.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 		<title>Calculadora</title>    
 	</head>
 
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col d-flex justify-content-center">
 
-          <div class="calculadora">
-            <input id="resultado" type="text" class="form-control resultado" placeholder="0" disabled="disabled" />
+         <div class="calculator">
+            <div class="tela">
+                <div class="visor">
+                  <input id="historico" value="" disabled></input>
+                  <input id="resultado" disabled value=""></input>
+                </div>
+            </div>
 
-              <div class="row">
-                <button onclick="calcular('acao','c')" type="button" class="btn">C</button>
+            <div class="teclado">
+                  <button onclick="calcular('acao','c')" type="button" class="btn">C</button>
                 <button onclick="calcular('acao','+/-')" type="button" class="btn">+/-</button>
                 <button onclick="calcular('acao','%')" type="button" class="btn">%</button>
                 <button onclick="calcular('acao','/')" type="button" class="btn">/</button>
-              </div>
-
-              <div class="row">
+              
                 <button onclick="calcular('valor',7)" type="button" class="btn">7</button>
                 <button onclick="calcular('valor',8)" type="button" class="btn">8</button>
                 <button onclick="calcular('valor',9)" type="button" class="btn">9</button>
                 <button onclick="calcular('acao','*')" type="button" class="btn">x</button>
-              </div>
-
-              <div class="row">
+              
                 <button onclick="calcular('valor',4)" type="button" class="btn">4</button>
                 <button onclick="calcular('valor',5)" type="button" class="btn">5</button>
                 <button onclick="calcular('valor',6)" type="button" class="btn">6</button>
                 <button onclick="calcular('acao','-')" type="button" class="btn">-</button>
-              </div>
-
-              <div class="row">
+              
                 <button onclick="calcular('valor',1)" type="button" class="btn">1</button>
                 <button onclick="calcular('valor',2)" type="button" class="btn">2</button>
                 <button onclick="calcular('valor',3)" type="button" class="btn">3</button>
                 <button onclick="calcular('acao','+')" type="button" class="btn">+</button>
-              </div>
-
-              <div class="row">
-                <button onclick="calcular('valor',0)" type="button" class="btn zero">0</button>
+              
+                <button onclick="calcular('valor',0)" type="button" class="btn">0</button>
                 <button onclick="calcular('acao','.')" type="button" class="btn">.</button>
-                <button onclick="calcular('acao','=')" type="button" class="btn">=</button>
-              </div>
+                <button onclick="calcular('acao','=')" type="button" class="btn zero">=</button>
 
-          </div>
-        </div>  
-      </div>
+            </div>
+        </div>
     </div>
 
 

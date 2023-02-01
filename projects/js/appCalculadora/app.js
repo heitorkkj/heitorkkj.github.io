@@ -1,4 +1,13 @@
 function calcular(tipo , valor){
+
+    let historico = document.getElementById('historico')
+
+    if(valor == 'c'){
+        historico.value = ''; 
+    }else{
+        historico.value += valor;
+    }
+
     if(tipo === 'acao'){
         if(valor === 'c'){
             document.getElementById('resultado').value = '';
@@ -9,10 +18,11 @@ function calcular(tipo , valor){
         if(valor === '+/-'){
             let numero = document.getElementById('resultado').value;
             if(numero<0){
-                numero = numero.replace('-','+');
+                numero = numero.replace('-',''); 
                 document.getElementById('resultado').value = '';
                 document.getElementById('resultado').value += numero;
             }else{
+                numero = `+${numero}`
                 numero = numero.replace('+','-');
                 document.getElementById('resultado').value = '';
                 document.getElementById('resultado').value += numero;
