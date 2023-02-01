@@ -210,7 +210,7 @@ p{
     font-weight: 300;
     font-size: 1.8em;
 
-    align-self: center;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
