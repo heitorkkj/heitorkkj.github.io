@@ -7,8 +7,7 @@ body,html{
 
 body{
     background-image: url("/img/back.jpeg");
-    background-size: cover;
-    background-position: center; 
+    background-size: cover; 
 
     scroll-behavior: smooth;
     color:#fff;
@@ -23,7 +22,6 @@ body{
 .cards{
     height: 100%;
     width: 100%;
-    margin: 30px;
 
     display: flex;
     justify-content: center;
@@ -144,14 +142,9 @@ body{
 
 @media (width < 1100px){
 
-    .cards{
-        flex-flow: row wrap;
-        gap:30px;
-    }
-
     .card{
         width: 80%;
-        height: 80%;
+        height: 100%;
     }
 
     .btn-voltarPag{
