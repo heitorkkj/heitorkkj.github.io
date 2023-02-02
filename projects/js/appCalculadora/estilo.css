@@ -155,31 +155,19 @@ body{
   box-shadow: 1px 1px 1px #000;
 }
 
-
-@media (max-width: 900px){
-
-    .calculator{
-      width: 35%;
-      height: 60%;
-    }
-
-}
-
-
-@media (max-width: 790px){
+@media only screen and (width < 392px){
 
   .calculator{
-    width: 40%;
-    height: 60%;
+    width: 90%;
   }
 
 }
 
-@media (max-width: 510px){
+
+@media (max-width: 500px){
 
   .calculator{
-    width: 80%;
-    height: 80%;
+    width: 90%;
   }
 
 }
