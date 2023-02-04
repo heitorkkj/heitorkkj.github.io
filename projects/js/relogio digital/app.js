@@ -11,74 +11,35 @@ setInterval(function(){
     let hora = date.getHours()
     let minutos = date.getMinutes()
     let segundos = date.getSeconds()
+    let controleSegundos = 0
 
     if(minutos < 10){
         minutos = `0${minutos}`
     }
-     
-    if( hora>=0 && hora<=6 || hora>=12 && hora<=18){
-        let contador = 0
-        let i = 0 
-        let porcentMinutos = (minutos*10)/6
-        porcentMinutos = Math.round(porcentMinutos)
 
-        if(hora>=0 && hora<=6){
-            i = 0 
-            for(i; i<hora;i++){
-                contador++
-            }
+    if(segundos > 0 && segundos <= 30){
+        segundaMetadeRelogio.style.height = '0%'
+        primeiraMetadeRelogio.style.height = `${3.3*segundos}%`
+    }else if(segundos >= 30 && segundos < 60){
+        primeiraMetadeRelogio.style.height = '100%'
 
-            porcentMinutos = `${contador}.${porcentMinutos}`
-            porcentMinutos = Number(porcentMinutos)
-
-            primeiraMetadeRelogio.style.height = `${16.6*porcentMinutos}%`
-
-        }else{
-            i = 12
-            for(i; i<hora;i++){
-                contador++
-            }
-
-            porcentMinutos = `${contador}.${porcentMinutos}`
-            porcentMinutos = Number(porcentMinutos)
-
-            primeiraMetadeRelogio.style.height = `${16.6*porcentMinutos}%`
-        }
-    }else{
-        let contador = 0
-        let i = 0 
-        let porcentMinutos = (minutos*10)/6
-        porcentMinutos = Math.round(porcentMinutos)
-
-        if(hora>=6 && hora<=12){
-            i = 0 
-            for(i; i<hora;i++){
-                contador++
-            }
-
-            porcentMinutos = `${contador}.${porcentMinutos}`
-            porcentMinutos = Number(porcentMinutos)
-
-            segundaMetadeRelogio.style.height = `${16.6*porcentMinutos}%`
-
-        }else{
-            i = 18
-            for(i; i<hora;i++){
-                contador++
-            }
-
-            porcentMinutos = `${contador}.${porcentMinutos}`
-            porcentMinutos = Number(porcentMinutos)
-
-            segundaMetadeRelogio.style.height = `${16.6*porcentMinutos}%`
-        }
+        segundaMetadeRelogio.style.height = `${3.45*(segundos - 30)}%`
+    }else{ 
+        segundaMetadeRelogio.style.height = '0%'
+        primeiraMetadeRelogio.style.height = '0%'
     }
 
-    console.log(minutos)
 
 
     clock.innerHTML =  `${hora}<hr/>${minutos}`;
 }, 1000)
 
+/*
+const today = new Date();
+document.write(new Intl.DateTimeFormat('pt-BR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+}).format(today));*/
 
     
