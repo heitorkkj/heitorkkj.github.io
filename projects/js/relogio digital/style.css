@@ -12,6 +12,8 @@ body {
     text-rendering:  optimizeLegibility;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
+
+    background-color: #FEFEDF;
 }
 
 #relogio {
@@ -28,7 +30,7 @@ body {
     font-weight: 600;
     color:#595959;
     
-    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    background-color:#C197FF;
 }
 
 .col {
@@ -36,6 +38,7 @@ body {
     height:20%;
 
     align-self: center;
+    color:#fef9d7;
 }
 
 .col-2 {
@@ -45,6 +48,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.col h1, .col-2 h2{
+    padding: 15px 0 10px 0;
 }
 
 #clock{
@@ -60,6 +67,7 @@ body {
     border: none;
     border-radius: 500px;
     color: #fef9d7;
+    font-size: 1.9em;
 }
 
 #clock hr{
@@ -152,11 +160,6 @@ hr {
         height: 160px;
     }
     
-    .fundo-relogio{
-        width: 66%;
-        height: 37%;
-    }
-    
     .fundo-relogio-1, .fundo-relogio-2{
         width: 50%;
         height: 100%;
@@ -165,3 +168,27 @@ hr {
 
 }
   
+@media (min-width:710px) and (min-height:1000px){
+
+    #clock{
+        width: 70%;
+        height: 50%;
+
+        font-size: 3em;
+    }
+    
+    #clock hr{
+        height: 180px;
+    }
+    
+    .fundo-relogio{
+        width: 52%;
+        height: 38%;
+    }
+    
+    .fundo-relogio-1, .fundo-relogio-2{
+        width: 50%;
+        height: 100%; 
+    }
+
+}

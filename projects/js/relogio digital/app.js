@@ -1,5 +1,13 @@
 
-let clock = document.getElementById('clock');
+let today = new Date();
+today = today.getDay()
+
+let todayExtend = new Date()
+todayExtend = todayExtend.getDay()
+let dayName = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
+
+
+let clock = document.getElementById('clock')
 let primeiraMetadeRelogio = document.getElementById('primeira-metade')
 let segundaMetadeRelogio = document.getElementById('segunda-metade')
 
@@ -31,15 +39,13 @@ setInterval(function(){
 
 
 
-    clock.innerHTML =  `${hora}<hr/>${minutos}`;
+    clock.innerHTML =  `
+        ${hora} <br/>
+        <hr/> 
+        ${minutos} <br/>
+    `;
+
 }, 1000)
 
-/*
-const today = new Date();
-document.write(new Intl.DateTimeFormat('pt-BR', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
-}).format(today));*/
 
     
