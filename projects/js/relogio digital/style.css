@@ -13,7 +13,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
 
-    background-color: #FEFEDF;
+    background-color: aliceblue;
 }
 
 #relogio {
@@ -29,8 +29,6 @@ body {
     font-size: 20px;
     font-weight: 600;
     color:#595959;
-    
-    background-color:#C197FF;
 }
 
 .col {
@@ -38,7 +36,7 @@ body {
     height:20%;
 
     align-self: center;
-    color:#fef9d7;
+    color:#3E3E3E;
 }
 
 .col-2 {
@@ -50,37 +48,42 @@ body {
     justify-content: center;
 }
 
-.col h1, .col-2 h2{
+.col h1{
+    font-size: 2em;
+    letter-spacing: 0.1cm;
     padding: 15px 0 10px 0;
 }
 
 #clock{
-    width: 25%;
-    height: 50%;
+    width: 34%;
+    height: 70%;
 
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 
-    background-color: rgba(18, 1, 13, 1);
-    border: none;
-    border-radius: 500px;
-    color: #fef9d7;
-    font-size: 1.9em;
+    background-color: aliceblue;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow:  26px 26px 100px #c9c9c9,
+                -26px -26px 100px #ffffff;
+    border: 2px rgb(89, 89, 89);
+    color: #3E3E3E;
+    font-size: 2.9em;
 }
 
 #clock hr{
-    height: 100px;
-    border: 1px solid rgb(255, 255, 255);
+    height: 60%;
+    border:1px solid #3E3E3E;
 
     transform: rotate(180deg);
     margin: 0 10px 0 10px;
 }
 
 .fundo-relogio{
-    width: 18%;
-    height: 37%;
+    width: 25%;
+    height: 52%;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -101,7 +104,7 @@ body {
     border: none;
     border-radius: 0;
     margin: 0;
-    background-color: #fcfcfcee;
+    background-color: #3E3E3E;
 }
 
 .fundo-relogio-1{
@@ -151,20 +154,21 @@ hr {
 
     #clock{
         width: 69%;
-        height: 49%;
+        height: 50%;
 
         font-size:2.5em;
     }
     
     #clock hr{
-        height: 160px;
+        height: 70%;
     }
-    
-    .fundo-relogio-1, .fundo-relogio-2{
-        width: 50%;
-        height: 100%;
-        
-    }
+
+    .fundo-relogio{
+        width: 65%;
+        height: 35%;
+
+    }   
+
 
 }
   

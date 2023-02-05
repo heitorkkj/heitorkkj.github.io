@@ -1,12 +1,4 @@
 
-let today = new Date();
-today = today.getDay()
-
-let todayExtend = new Date()
-todayExtend = todayExtend.getDay()
-let dayName = new Array ("domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado")
-
-
 let clock = document.getElementById('clock')
 let primeiraMetadeRelogio = document.getElementById('primeira-metade')
 let segundaMetadeRelogio = document.getElementById('segunda-metade')
@@ -47,5 +39,3 @@ setInterval(function(){
 
 }, 1000)
 
-
-    

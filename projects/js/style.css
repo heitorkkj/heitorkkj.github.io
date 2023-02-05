@@ -1,13 +1,10 @@
 *{margin:0; padding: 0;}
 
-body,html{
+body{
     width: 100%;
     height: 100%;
-}
 
-body{
-    background-color:#D5CABD; 
-
+    background-color:#D5CABD;
     scroll-behavior: smooth;
     color:#fff;
     font-family:'Jost', sans-serif;
@@ -36,14 +33,13 @@ body{
     align-items: center;
     justify-content: flex-end;
     overflow: hidden;
-    width: 27%;
+    width: 25%;
     height: 350px;
-    padding: 10px;
+    padding: 15px;
     gap:10px;
 
-    background-color: rgb(188, 179, 194);
-    color: black;
-    border-radius: 5px;
+    background-color: #fff;
+    border-radius: 10px;
     transition: all 0.4s;
 }
 
@@ -57,43 +53,54 @@ body{
     align-self: flex-start;
     align-items: center;
 
+    color:rgb(15, 15, 15);
     font-size: 1.375em;
 }
 
 .card-img{ 
     width: 100%;
-    height: 40%;
+    height: 60%;
     background-color: inherit;
     align-self: center;
     object-fit: fill;  
+
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+    border-radius: 10px;
 }
 
 .card-img img{ 
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .card-content{
     width: 100%;
     height: 30%;
-    font-style: normal;
-    text-align: justify;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.4375rem;
 
+    color:rgb(52, 52, 52);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 1.4375rem;
+ 
     overflow: hidden;
 }
 
 .btn-link{
-    width: auto;
+    width: 100%;
     height: auto;
-    padding: 5px;
+    padding: 9px;
+
     border:none;
-    border-radius: 5px;
-    font-size: 1em;
-    background-color: var(--back);
+    border-radius: 10px;
+
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    background-color: #5274D9; 
 }
 
 .btn-link a{
@@ -103,14 +110,21 @@ body{
 
 
 .btn-voltarPag{
-    width:30%;
+    width: 87%;
     height: 46px;
-    padding: 10px;
+    display: flex;
+    gap: 15px;
 
-    border: none;
-    border-radius: 10px;  
-    background-color: var(--back);
+    border:none;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 10px;
+
+    background-color: #fff;
     cursor: pointer;
+    font-size: 1.3em;
+    font-weight: 300;
 
     transition: all 0.4s;
 }
@@ -204,27 +218,94 @@ body{
     
     .btn-voltarPag:hover{
         transform: scale(1.01);
-    }    
+    }   
 }
 
-@media (min-width: 780) and (max-width: 1100px){
-
-    .cards{
-        padding: 30px 0 30px 0;
-    }
+@media (min-width: 700px) and (min-height: 1000px){
 
     .card{
-        width: 70%;
-        height: auto;
+        width: 40%;
+        height: 310px;
+        padding: 10px;
+    
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+    }
+    
+    .card:hover{
+        transform: scale(1.01);
+    }
+    
+    .card-title{
+        font-size: 1.3em;
+        font-weight: 600;
+    }  
+    
+    .card-img{ 
+        width: 100%;
+        height: 51%;
+        background-color: inherit;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+        -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+        -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+        align-self: center;
+        object-fit: fill;  
+      
 
-        padding: 0 30px 0 30px;
+        border-radius: 10px;
+    }
+    
+    .card-img img{ 
+        width: 100%;
+        height: 100%;
+
+        border-radius: 10px;
+    }
+    
+    .card-content{
+        height: 30%;
+        font-style: normal;
+        color: rgb(57, 57, 57);
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.4375rem;
+        
+        overflow: hidden;
+    }
+    
+    .btn-link{
+        width: 100%;
+        height: auto;
+        padding: 9px;
+
+        border:none;
+        border-radius: 10px;
+
+        font-size: 1em;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        background-color: #5274D9;
     }
 
     .btn-voltarPag{
-        width: 80%;
-        height: auto;
-        font-size: 1em;
-        text-align: center;
+        width:88%;
+        height: 46px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px 0 10px;
+
+        background-color: #fff;
+        cursor: pointer;
+        font-size: 1.3em;
+        font-weight: 300;
+    
+        transition: hover 0.4s;
     }
     
+    .btn-voltarPag:hover{
+        transform: scale(1.01);
+    }  
+
 }
