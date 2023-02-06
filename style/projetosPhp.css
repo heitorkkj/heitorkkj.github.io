@@ -97,11 +97,8 @@ body{
     font-weight: 500;
     letter-spacing: 0.1em;
     background-color: #5274D9;
-}
-
-.btn-link a{
-    text-decoration: none;
-    color: aliceblue;
+    color: #fff;
+    cursor: pointer;
 }
 
 

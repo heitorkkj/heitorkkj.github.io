@@ -293,7 +293,8 @@ svg {
     font-size: 1.5em;
     font-weight: 100;
     transition: all 0.4s;
-    border-radius:5px;
+    padding: 5px;
+    border-radius:10px;
 }
 
 .controle-linguagem button:hover{
