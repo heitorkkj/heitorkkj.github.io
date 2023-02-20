@@ -1,135 +1,163 @@
-*{padding: 0; margin: 0;}
+*{
+    padding: 0; 
+    margin: 0;
+    border:0; 
+
+    list-style: none;
+}
 
 :root{
     --background-color: #14131b;
-    --color: #fff;
+    --color: #e9e5e5;
     --border: 1px solid red;
 }
 
-body,html{
-    width: 100%;
-    height: 100%;
-}
-
 body{
-    background-image: url("../img/back.jpeg");
-    background-size: cover;
-    background-position: center; 
-    
-    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #14131b; 
+    background-image: url('/assets/img/wave.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size:contain;
+
+    scroll-behavior: smooth;   
     color: var(--color);
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 
-/* Menu */
-nav{
-    width: 100%;
-    height: 10%;
+main{
+    width: 100vw;
+    height: 100vh;
+}
 
-    color:white;
+
+
+/* menu */
+
+
+
+nav{
+    width: 100vw;
+    height: 10vh;
 }
 
 nav span{
-    display: flex;
     float: left;
-    align-items: center;
-    width: 50px;
-    padding: 10px 0 0 10%;
+    text-align: center;
+
+    margin-left: 10%;
+    padding:10px;
+
     font-size: 1.7em;
     color: #ba24ff;
 }
 
-#menu-principal{
-    float: right;
-    padding: 10px 10% 0 0;
-
+nav ul#menu-principal{
     display: flex;
     flex-direction: row;
     gap:20px;
-    list-style: none;
-    font-weight: 100;
+
+    float:right;
+    margin-right: 10%;
+    padding:10px;
+
+    font-weight: 400;
     font-size: 1em;
 }
 
-nav ul li{
-    border-radius: 20px;
+nav ul#menu-principal li{
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
 }
 
-nav ul li > a{
-    text-decoration: none;
+nav ul#menu-principal li > a{
+    padding: 5px;
+    border-radius: 5px;
     color:white;
-    transition: all 0.8s;
 
-    border-radius: 5px;
-}
-
-nav ul li > a > i{
-    padding: 4px;
-}
-
-nav ul li:hover > a{
-    background-color: white;
-    color: black;
-    transform: scale(1.2);
-}
-
-.btn-menu{
-    border:none;
-    border-radius: 5px;
-    display: flex;
-    align-items: flex-start;
-    align-items: center;
-    padding: 0 0 0 10px;
-
-    font-style: normal;
-    font-size: 1.3em;
-    width: 50px;
-    height: 30px;
-
-    background-color: #a707f1b3;
-    color:#f107f1;
+    text-decoration: none;
     transition: all 0.4s;
 }
 
-.btn-menu:hover{
-    transform: scale(1.2);
+nav ul#menu-principal li > a > i{
+    padding: 4px;
 }
 
-#menu-drop{
+nav ul#menu-principal li:hover > a{
+    background-color: white;
+    color: black;
+    transform: scale(1.01);
+}
+
+nav ul#menu-principal li .btn-menu{
+    width: 50px;
+    height: 30px;
+    padding:5px;
+
+    display: flex;
+    align-items: flex-start;
+    align-items: center;
+
+    font-size: 1.3em;
+
+    border-radius: 5px;
+    background-color: #a707f1b3;
+    color:#f107f1;
+    cursor: pointer;
+
+    transition: all 0.4s;
+}
+
+nav ul#menu-principal li .btn-menu:hover{
+    background-color:  #f107f17f;
+    color:#d000ffb3;
+}
+
+.btn-menu-drop {
+    width: 50px;
+    height: 30px;
+
     display: none;
+    float: right;
+    border-radius: 5px;
+    margin: 10px 10px 0 0;
+    font-size: 1.3em;
+
+    background-color: #a707f1b3;
+    color: #fff;
 }
 
-/*        Main       */
 
-#area-sobre{
-    width: 100%;
-    height: 90%;
+
+/*    Section - apresentacao       */
+
+
+
+section#area-sobre{
+    width: 100vw;
+    height: 90vh;
 
     display: flex;
     flex-wrap: wrap;
 }
 
-#area-sobre svg{
-    align-self: flex-end;
-    justify-self: flex-end;
-}
-
-#sobre{
+article#sobre{
    width: 50%;
-   height: auto;
+   height: 100%;
+
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   justify-content: flex-end;
+   justify-content: center;
 }
 
-#sobre h1, 
-h2,
-h3{
+article#sobre h1, 
+article#sobre h2,
+article#sobre h3{
    margin-left: 25%;
    font-weight: 100;
    transition: all 0.8s;
@@ -137,87 +165,92 @@ h3{
    transition-timing-function: linear;
 }
 
-#sobre h1{
+article#sobre h1{
    color:#db44fd;
    padding-top: 10px;
    padding-bottom:30px;
 }
 
-#sobre h3{ 
+article#sobre h3{ 
    color:#db44fd;
 }
 
-#icone{
-   width: 50%;
-   height: auto;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: flex-end;
+section#area-sobre aside{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-#icone img{
+aside img{
    width: 65%;
    height: 65%;
-   object-fit: fill;
 }
 
-svg {
-    width: 100%;
-}
 
-@media (max-width: 700px){
-    #menu-principal{
-        padding: 10px 5px 0 0;
+
+/* media query */
+
+
+
+@media (max-width: 800px){
+
+    nav ul#menu-principal{
+        margin-right: 5px;
+        padding:10px 0 0 0;
+        gap:10px;
     }
+
+
+
 }
 
 @media (max-width: 600px){
-    #menu-drop{
-        display: block;
-    }
-
     nav span{
-        padding: 10px 0 0 30px;
+        margin:0 0 0 20px;
     }
 
     .active{
         display: flex !important;
     }
     
-    #menu-principal{
-        display: none;
-        float: none;
+    nav ul#menu-principal{
+        width: 100vw;
+        height: 100vh;
 
+        display: none;
         flex-direction: column;
-        z-index: 99;
-        position: fixed;
         justify-content: center;
         align-items: center;
+        gap:10px;
+
+        position: fixed;
 
         font-size: 1.5em;
-        height: 100vh;
-        width: 100vw;
         background-color: #19181e;
-        z-index: 10;
         transition: all 0.4s;
     }
 
     .btn-menu-drop{
-        border:none;
-        border-radius: 5px;
-        float: right;
-        margin: 10px 10px 0 0 ;
-    
-        font-size: 1.3em;
         width: 50px;
         height: 30px;
+        margin: 10px 10px 0 0;
+        float: right;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border:none;
+        border-radius: 5px;
     
+        font-size: 1.5em;    
         background-color: #a707f1b3;
         color:#fff;
     }
 
-    .btn-menu{
+    nav ul#menu-principal li .btn-menu{
         display:none;
     }
 
@@ -225,7 +258,7 @@ svg {
         display: none;
     }
 
-    #sobre{
+    article#sobre{
         width: 100%;
         height: 90%;
         display: flex;
@@ -234,32 +267,35 @@ svg {
         justify-content: center;
     }
 
-    #sobre h1, 
-    h2,
-    h3{
+    article#sobre h1, 
+    article#sobre h2,
+    article#sobre h3{
     margin-left: 30px;
-
     }
 
-    #icone img{
+    section#area-sobre aside img{
         display: none;
     }
 
-    #sobre h3{ 
+    article#sobre h3{ 
         font-size: 0.9em;
         color:#db44fd;
     }
 }
 
-/*  card  */
 
-#area-projetos{
-    width: 100%;
-    height: 100%;
+
+/*  Area card  */
+
+
+
+section#area-projetos{
+    width: 100vw;
+    height: 100vh;
     background-color: #fff;
 }
 
-#cards{
+article#cards{
     width: 100%;
     height: 90%;
     color: #14131b;
@@ -270,7 +306,7 @@ svg {
     justify-content: center;
 }
 
-.controle-linguagem{
+header.controle-linguagem{
     border: none;
     padding: 15px;
     display: flex;
@@ -280,13 +316,13 @@ svg {
     gap:10px 
 }
 
-.controle-linguagem h1{
+header.controle-linguagem h1{
     font-size: 1.9em;
     font-weight: 500;
     color: #000000;
 }
 
-.controle-linguagem button{
+header.controle-linguagem button{
     border: none;
     background-color: inherit;
     color: #ba24ff;
@@ -297,26 +333,36 @@ svg {
     border-radius:10px;
 }
 
-.controle-linguagem button:hover{
+header.controle-linguagem button:hover{
     background-color: #ba24ff;
     color: inherit;
     transform: scale(1.05);
 }
 
+article#cards > img{
+    width: 50%;
+    height: 50%;
+
+    margin-bottom: 30px;
+}
+
+
 
 /*  rodape  */
 
+
+
 footer{
-    width: 100%;
-    height: 20%;
+    width: 100vw;
+    height: 10vh;
 
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
     background-color: #fff;
 }
 
-footer ul{
+footer section{
     height: 60px;
     width: 50%;
     margin: 0 0 10px 0;
@@ -353,7 +399,7 @@ footer ul{
 }
 
 @media (max-width: 780px){
-    footer ul{
+    footer section{
         height: 70px;
         width: 60%;
         margin: 0 15% 0 15%;
@@ -362,7 +408,7 @@ footer ul{
 }
 
 @media (max-width: 600px){
-    footer ul{
+    footer section{
         height: 70px;
         width: 80%;
         margin: 0 10% 0 10%;
@@ -372,7 +418,7 @@ footer ul{
 
 @media (max-width: 500px){
 
-    footer ul{
+    footer section{
         height: 70px;
         width: 100%;
         border-radius: 10px;

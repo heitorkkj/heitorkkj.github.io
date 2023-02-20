@@ -25,12 +25,7 @@ let curtir = () =>{
 let abrirMenu = () => {
     menu = document.getElementById('menu-principal')
 
-    if(menu.className == ''){
-        menu.className = 'active'
-    }else{
-        menu.className = ''
-    }
-    
+    menu.className = menu.className == '' ? 'active' : ''    
 }
 
 $(document).ready(() => {
