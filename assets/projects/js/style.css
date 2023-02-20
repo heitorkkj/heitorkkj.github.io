@@ -119,19 +119,27 @@ body{
     border-radius: 10px;
     align-items: center;
     justify-content: center;
-    margin: 0 10px 0 10px;
+    margin: 10px auto;
 
     background-color: #fff;
     cursor: pointer;
     font-size: 1.3em;
     font-weight: 300;
 
-    transition: all 0.4s;
+    transition: all 0.8s;
 }
 
 .btn-voltarPag:hover{
-    transform: scale(1.04);
+    background-color: rgba(0, 0, 0, 0.858);
+    color:white;
+    transform: scale(1.01);
 }
+
+
+
+/*  media query */
+
+
 
 @media (max-width: 600px){
 
@@ -206,20 +214,23 @@ body{
         gap: 10px;
         align-items: center;
         justify-content: center;
-        margin: 0 10px 0 10px;
+        margin: 10px auto;
 
         background-color: #fff;
         cursor: pointer;
         font-size: 1.2em;
         font-weight: 300;
     
-        transition: hover 0.4s;
+        transition: all 0.4s;
     }
     
-    .btn-voltarPag:hover{
-        transform: scale(1.01);
-    }   
 }
+
+
+
+/*  media query */
+
+
 
 @media (min-width: 700px) and (min-height: 1000px){
 

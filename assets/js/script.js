@@ -1,12 +1,13 @@
 let ola = ['Hello welcome!👋','Hola es bienvenido!👋','Olá seja bem-vindo!👋']
-let x = 0
+let count = 0
+
 meuIntervalo = setInterval(()=>{
     apresentacao = document.getElementById('bemVindo') 
-    apresentacao.innerHTML = ola[x]
-    if(ola[x] === 'Olá seja bem-vindo!👋'){
+    apresentacao.innerHTML = ola[count]
+    if(ola[count] === 'Olá seja bem-vindo!👋'){
         clearInterval(meuIntervalo);
     }else{
-        x++
+        count++
     }
 }, 1500)
 
