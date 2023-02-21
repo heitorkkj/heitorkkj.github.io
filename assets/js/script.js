@@ -67,7 +67,10 @@ $(document).ready(() => {
 let irPara = (local) =>{
     let endereco = local 
 
-    window.open(endereco,'_blank')
+    if(local == 'nenhum'){
+        alert('App não postado na web, aguarde!')
+    }else
+        window.open(endereco,'_blank')
 }
 
 let recuperarCard = (linguagem) =>{
@@ -110,7 +113,7 @@ let recuperarCard = (linguagem) =>{
                 <h1 class="card-title">${card.titulo}</h1>
                 <p class="card-content">${card.content}</p> 
 
-                <button class="btn-link" onclick="irPara('${card.link}')" >Visitar
+                <button class="btn-link" onclick="irPara('nenhum')" >Visitar
                 </button>
             </section>`))
             }
