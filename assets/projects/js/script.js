@@ -2,6 +2,12 @@ let voltarPag = () =>{
     window.close()
 }
 
+let irPara = (local) =>{
+    let endereco = local 
+
+    window.open(endereco,'_blank')
+}
+
 let container = document.getElementById('projetos')
 container.innerHTML = ''
 
@@ -31,7 +37,7 @@ for(let count = 0; count<=quantidadeDeProjetos; count++){
         <div class="card-content">
         ${card.content}
         </div> 
-        <button class="btn-link"><a href="${card.link}" target="_blank">Visitar</a>
+        <button class="btn-link" onclick="irPara('${card.link}')">Visitar
         </button>
     </div>`
 

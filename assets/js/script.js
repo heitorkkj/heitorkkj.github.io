@@ -113,7 +113,7 @@ let recuperarCard = (linguagem) =>{
                 <h1 class="card-title">${card.titulo}</h1>
                 <p class="card-content">${card.content}</p> 
 
-                <button class="btn-link" onclick="irPara('nenhum')" >Visitar
+                <button class="btn-link" onclick="irPara('${card.link}')" >Visitar
                 </button>
             </section>`))
             }

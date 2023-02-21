@@ -313,7 +313,7 @@ body{
         font-size: 1.3em;
         font-weight: 300;
     
-        transition: hover 0.4s;
+        transition: all 0.4s;
     }
     
     .btn-voltarPag:hover{
