@@ -51,7 +51,7 @@ let email = () =>{
 $(document).ready(() => {
 	
     $('#linguagem-php').on('click', () =>{
-        $('#cards').load('/assets/pages/projetosPhp.html')
+        $('#cards').load(recuperarCard('php'))
     })
 
 })
@@ -59,8 +59,68 @@ $(document).ready(() => {
 $(document).ready(() => {
 	
     $('#linguagem-js').on('click', () =>{
-        $('#cards').load('/assets/pages/projetosJs.html')
+        $('#cards').load(recuperarCard('js'))
     })
 
 })
 
+let irPara = (local) =>{
+    let endereco = local 
+
+    window.open(endereco,'_blank')
+}
+
+let recuperarCard = (linguagem) =>{
+    let areaDeProjetos = document.getElementById('cards')
+    areaDeProjetos.innerHTML = ''
+    areaDeProjetos.innerHTML = `   
+    <section class="cards" id="projetos-capa"> 
+        <button onclick="irPara('/assets/projects/js/index.html')"class="btn-verTodos">
+            <strong>Ver todos</strong>
+        </button>
+    </section>`
+
+
+
+    if(linguagem == 'js'){    
+        let cardsCapa = document.getElementById('projetos-capa')
+
+        let quantidadeDeProjetos = todosOsProjetos.length
+
+        let card = {
+            img: '',
+            titulo: '',
+            content:'', 
+            link:''
+
+        }
+
+        for(let count = 0; count<=quantidadeDeProjetos; count++){
+            
+
+            if(todosOsProjetos[count].projetoCapa == 'sim'){
+
+            card.img = todosOsProjetos[count].img
+            card.titulo = todosOsProjetos[count].titulo
+            card.content = todosOsProjetos[count].content
+            card.link = todosOsProjetos[count].link
+
+            cardsCapa.innerHTML +=` 
+            <section class="card" id="card-js">
+                <img class="card-img" src="${card.img}"/>
+
+                <h1 class="card-title">${card.titulo}</h1>
+                <p class="card-content">${card.content}</p> 
+
+                <button class="btn-link" onclick="irPara('${card.link}')" >Visitar
+                </button>
+            </section>`
+            }
+        }
+
+
+    }else{
+        alert(linguagem)
+    }
+
+}

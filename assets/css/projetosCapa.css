@@ -6,18 +6,23 @@
     width: 90%;
     height: 80%;
     margin: 0 0 5% 0;
+
     background-image: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
     border-radius: 10px;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     gap:20px;
 }
 
-.card{
+.cards::-webkit-scrollbar{
+    visibility: collapse;
+}
+
+section.card{
     width: 24%;
     height: 320px;
     padding: 10px;
@@ -35,19 +40,11 @@
     transition: all 0.4s;
 }
 
-.card:hover{
+section.card:hover{
     transform: scale(1.02);
 }
 
-.card-title{
-    width: 100%;
-    display: flex;
-    align-self: flex-start;
-    align-items: center;
-    font-size: 1.2em;
-}
-
-.card-img{ 
+img.card-img{ 
     width: 100%;
     height: 70%;
     align-self: center;
@@ -59,14 +56,16 @@
     border-radius: 10px;
 }
 
-.card-img img{ 
+h1.card-title{
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: fill;
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    font-size: 1.2em;
 }
 
-.card-content{
+p.card-content{
+    width: 100%;
     height: 30%;
     font-style: normal;
     color: rgb(57, 57, 57);
@@ -75,7 +74,7 @@
     overflow: hidden;
 }
 
-.btn-link{
+button.btn-link{
     width: 100%;
     height: auto;
     border:none;
@@ -85,19 +84,14 @@
     font-size: 1em;
     font-weight: 500;
     letter-spacing: 0.1em;
+
+    color: aliceblue;
     background-color: #5274D9;
 }
 
-.btn-link a{
-    text-decoration: none;
-    color: aliceblue;
-}
-
-
-.btn-verMais{
+button.btn-verTodos{
     width:9%;
-    height: 70%;
-    padding: 10px;
+    height: 320px;
 
     border-radius: 10px;  
     background-color: #5274D9;
@@ -114,11 +108,11 @@
     transition: all 0.4s;
 }
 
-.btn-verMais:hover{
+button.btn-verTodos:hover{
     transform: scale(1.04);
 }
 
-.btn-verMais strong{
+button.btn-verTodos strong{
     font-size: 1.4em;
     color: aliceblue;
     font-weight: bold;
@@ -133,19 +127,23 @@
         margin: 0 0 10% 0;
         overflow: scroll;
     }
+        
+    .cards::-webkit-scrollbar{
+        visibility: collapse;
+    }
 
-    .card{
+    section.card{
         width: 80%;
         height: auto;
 
         margin: 20px 0 0 0;
     }
 
-    .btn-verMais strong{
+    button.btn-verTodos strong{
         transform: none;
     }
 
-    .btn-verMais{
+    button.btn-verTodos{
         width:80%;
         padding: 5px;
         height: 46px;
