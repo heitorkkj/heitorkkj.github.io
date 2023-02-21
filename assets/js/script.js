@@ -71,29 +71,27 @@ let irPara = (local) =>{
 }
 
 let recuperarCard = (linguagem) =>{
+
     let areaDeProjetos = document.getElementById('cards')
     areaDeProjetos.innerHTML = ''
     areaDeProjetos.innerHTML = `   
     <section class="cards" id="projetos-capa"> 
-        <button onclick="irPara('/assets/projects/js/index.html')"class="btn-verTodos">
+        <button onclick="irPara('/assets/projects/${linguagem}/index.html')"class="btn-verTodos">
             <strong>Ver todos</strong>
         </button>
     </section>`
 
+    let cardsCapa = document.getElementById('projetos-capa')
 
+    let card = {
+        img: '',
+        titulo: '',
+        content:'', 
+        link:''
+    }
 
     if(linguagem == 'js'){    
-        let cardsCapa = document.getElementById('projetos-capa')
-
         let quantidadeDeProjetos = todosOsProjetos.length
-
-        let card = {
-            img: '',
-            titulo: '',
-            content:'', 
-            link:''
-
-        }
 
         for(let count = 0; count<=quantidadeDeProjetos; count++){
             
@@ -105,7 +103,7 @@ let recuperarCard = (linguagem) =>{
             card.content = todosOsProjetos[count].content
             card.link = todosOsProjetos[count].link
 
-            cardsCapa.innerHTML +=` 
+            cardsCapa.insertAdjacentHTML('afterbegin', (` 
             <section class="card" id="card-js">
                 <img class="card-img" src="${card.img}"/>
 
@@ -114,13 +112,34 @@ let recuperarCard = (linguagem) =>{
 
                 <button class="btn-link" onclick="irPara('${card.link}')" >Visitar
                 </button>
-            </section>`
+            </section>`))
             }
         }
 
-
     }else{
-        alert(linguagem)
+        let quantidadeDeProjetos = todosOsProjetosPhp.length
+
+        for(let count = 0; count<=quantidadeDeProjetos; count++){
+
+            if(todosOsProjetosPhp[count].projetoCapa == 'sim'){
+
+            card.img = todosOsProjetosPhp[count].img
+            card.titulo = todosOsProjetosPhp[count].titulo
+            card.content = todosOsProjetosPhp[count].content
+            card.link = todosOsProjetosPhp[count].link
+
+            cardsCapa.insertAdjacentHTML('afterbegin', (` 
+            <section class="card" id="card-php">
+                <img class="card-img" src="${card.img}"/>
+
+                <h1 class="card-title">${card.titulo}</h1>
+                <p class="card-content">${card.content}</p> 
+
+                <button class="btn-link" onclick="irPara('${card.link}')" >Visitar
+                </button>
+            </section>`))
+            }
+        }
     }
 
 }
