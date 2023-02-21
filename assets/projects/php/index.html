@@ -10,48 +10,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&amp;display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="/assets/projects/php/style.css"/>
-    <title>Todos os projetos - JS</title>
+    <script src="/assets/js/projetosPhp.js"></script>
+
+    <title>Todos os projetos - PHP</title>
 </head>
-<body>  
-    <div class="cards" id="projetos">
-        <div class="card" id="card-js">
-            <div class="card-img">
-                <img src="/assets/projects/php/img/app_lista_tarefa.png"/>
-            </div>
-            <h1 class="card-title">App Lista de Tarefas
-            </h1>
-            <div class="card-content">
-                Aplicação para controle de tarefas. 
-            </div> 
-            <button class="btn-link" onclick="appPostado('app-lista-tarefas')">Visitar</button>
+<body> 
+
+    <main> 
+
+        <div class="cards" id="projetos">
+            
         </div>
 
-        <div class="card" id="card-js">
-                <div class="card-img">
-                    <img src="/assets/projects/php/img/app_send_mail.png"/>
-                </div>
-                <h1 class="card-title">
-                    App Send Mail   
-                </h1>
-                <div class="card-content">
-                    Aplicação para envio de email de maneira simples.
-                </div> 
-                <button class="btn-link" onclick="appNaoPostado()">Visitar</button>
-        </div>
-
-        <div class="card" id="card-js">
-            <div class="card-img">
-                <img src="/assets/projects/php/img/app_help_desk.png"/>
-            </div>
-            <h1 class="card-title">App Help Desk
-            </h1>
-            <div class="card-content">
-                Aplicação privada para abertura e controle de chamados.
-            </div> 
-            <button class="btn-link" onclick="appNaoPostado()">Visitar</button>
-        </div>
-
-    </div>
+        <button class="btn-voltarPag" onclick="voltarPag()">
+            <i class="bi bi-arrow-left-circle"></i>
+            <strong>Voltar para o portifolio</strong> 
+        </button>
+        
+    </main>
 
     <script src="script.js"></script>
 </body>

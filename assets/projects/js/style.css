@@ -28,15 +28,16 @@ body{
 }
 
 .card{
+    width: 25%;
+    height: 350px;
+    padding: 15px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    overflow: hidden;
-    width: 25%;
-    height: 350px;
-    padding: 15px;
     gap:10px;
+    overflow: hidden;
 
     background-color: #fff;
     border-radius: 10px;
@@ -101,13 +102,8 @@ body{
     font-weight: 500;
     letter-spacing: 0.1em;
     background-color: #5274D9; 
+    color:#fff;
 }
-
-.btn-link a{
-    text-decoration: none;
-    color: aliceblue;
-}
-
 
 .btn-voltarPag{
     width: 87%;
@@ -205,15 +201,18 @@ body{
         font-weight: 500;
         letter-spacing: 0.1em;
         background-color: #5274D9;
+        color:#fff;
     }
 
     .btn-voltarPag{
-        width:67%;
+        width:69%;
         height: 46px;
+        padding: 0 10px;
+
         display: flex;
-        gap: 10px;
         align-items: center;
         justify-content: center;
+        gap: 10px;
         margin: 10px auto;
 
         background-color: #fff;
@@ -296,15 +295,17 @@ body{
         font-weight: 500;
         letter-spacing: 0.1em;
         background-color: #5274D9;
+  
     }
 
     .btn-voltarPag{
         width:88%;
         height: 46px;
+
         display: flex;
-        gap: 10px;
         align-items: center;
         justify-content: center;
+        gap: 10px;
         margin: 0 10px 0 10px;
 
         background-color: #fff;
