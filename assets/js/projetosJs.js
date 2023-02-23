@@ -42,10 +42,10 @@ let todosOsProjetos = [
             projetoCapa:'nao'
         },
         {
-            img:'',
-            titulo:'',
-            content:'', 
+            img:'/assets/img/relogio-digital.png',
+            titulo:'n',
+            content:'test', 
             link:'/assets/projects/desafio-tecnico/index.html',
             projetoCapa:'nao'
-        }
+        },
 ]
