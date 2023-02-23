@@ -41,11 +41,4 @@ let todosOsProjetos = [
             link:'/assets/projects/js/relogio digital/index (2).html',
             projetoCapa:'nao'
         },
-        {
-            img:'/assets/img/relogio-digital.png',
-            titulo:'n',
-            content:'test', 
-            link:'/assets/projects/desafio-tecnico/index.html',
-            projetoCapa:'nao'
-        },
 ]
