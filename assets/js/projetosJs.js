@@ -40,12 +40,5 @@ let todosOsProjetos = [
             content:'Relogio Digital de acordo com o horario oficial brasileiro.', 
             link:'/assets/projects/js/relogio digital/index (2).html',
             projetoCapa:'nao'
-        },
-        {
-            img:'',
-            titulo:'App Pessoal',
-            content:'', 
-            link:'/assets/projects/desafio-tecnico/index.html',
-            projetoCapa:'sim'
         }
 ]
