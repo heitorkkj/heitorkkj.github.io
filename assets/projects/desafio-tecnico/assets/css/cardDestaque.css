@@ -1,0 +1,188 @@
+section.cardDestaque{
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow:  5px 5px 27px #9b9b9b,
+    -5px -5px 27px #ffffff;
+}
+
+.col-img{
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col-img output{
+    width: 100%;
+    height: 40px;
+
+    border-radius: 0 0 5px 5px;
+    background-color: #d3d3d395;
+
+    font-size: 1.6em;
+    text-align: center;
+}
+.col-img img{
+    width: 100%;
+    height: 80%;
+
+    object-fit: fill;
+    border-radius:5px 5px 0 0;
+}
+
+.col-content{
+    width: 30%;
+    height: 100%;
+
+    overflow-y: scroll;
+}
+
+.col-content::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+.col-content hr{
+    width: 100%;
+
+    border:1px solid rgb(178, 178, 178);
+}
+
+p.desc-abrev{
+    padding: 10px 0;
+    color:rgb(94, 93, 93);
+}
+
+p.desc-completa{
+    padding:10px 0;
+
+    text-align: justify;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.col-tecnica{
+    width: 25%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    border-radius: 10px;
+    border:1px solid rgb(206, 206, 206);
+}
+
+a{
+    width: auto;
+    height: 5%;
+
+    margin: 0 auto;
+    text-decoration: none;
+
+    color: inherit;
+    transition: all .8s;
+    cursor: pointer ;
+}
+
+a:hover{
+    color:rgb(0, 102, 255);
+}
+
+#lista-tecnica{
+    height: 90%;
+    padding-left: 20px;
+    padding-top: 10px;
+
+    border-radius: 10px;
+    border-top:1px solid rgba(87, 87, 87, 0.206);
+    
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#lista-tecnica li{
+    margin-left:10px;
+}
+
+
+
+/* media query */
+
+
+
+@media(max-width:950px){
+
+    section.cardDestaque{
+        width: 100%;
+        height: auto;
+
+        border-radius:0;
+        padding:0;
+    
+        display: flex;
+        flex-direction:column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    
+        background-color: #fff;
+        box-shadow: none;
+    }
+
+    .col-img{
+        width: 90%;
+        height: 20%;
+        margin: 10px auto;
+    }
+    
+    .col-img output{
+        width: 100%;
+        height: 30px;
+    
+        border-radius: 5px;
+    
+        font-size: 1.4em;
+        text-align: start;
+    }
+    .col-img img{
+        width: 100%;
+        height: 80%;
+    
+        object-fit: fill;
+        border-radius:5px;
+    }
+    
+    .col-content{
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    
+        overflow-y: scroll;
+    }
+    
+    
+    .col-tecnica{
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    a{
+        height: 5%;
+    
+        margin: 10px auto;
+    }
+
+}
