@@ -1,0 +1,373 @@
+*{margin:0; padding: 0;border: 0;outline: 0;}
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color:#E6E1E1;
+    scroll-behavior: smooth;
+    font-family:Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root{
+    --color:1px solid red;
+    --form-control-color: rebeccapurple;
+    --form-control-disabled: #959495;
+    --form-background: #fff;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #eaeaea;  
+}
+
+form.pesquisar{
+    width: 50%;
+    margin: 20px 10px;
+    padding:5px;
+
+    border-radius: 10px;
+    color:rgba(255, 255, 255, 0.781);
+    background-color:#474747;
+}
+
+form.pesquisar input{
+    width: 70%;
+    padding: 10px;
+
+    font-size: 0.9em;
+    color:rgba(255, 255, 255, 0.781);
+    background-color: inherit;
+}
+
+form.filtrar{
+    width:auto;
+    padding: 5px 10px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap:5px;
+
+    background-color:#fff;
+    color:rgba(0, 0, 0, 0.781);
+    border-radius: 5px;;
+}
+
+form.filtrar fieldset{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+}
+
+form.filtrar fieldset h3{
+    letter-spacing: 0.01em;
+    font-weight: 700;
+}
+
+form.filtrar label{
+    width: auto;
+    padding:5px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    font-size: .8em;
+
+    border-radius:10px;
+    color: #3a3a3a;
+    border:2px solid rgb(211, 211, 211);
+    background-color:inherit;
+    cursor: pointer;
+
+    transition: all .8s;
+}
+
+form.filtrar label:hover{
+    background-color:#d0d0d0;
+}
+  
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    background-color: #fff;
+    
+    padding:5px;
+    border:2px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    transform: translateY(-0.075em);
+  
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+}
+  
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em blue;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+
+section{
+    height: 90%;
+    width: 100%;
+    padding: 30px 0 30px 0;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-flow: row wrap;
+    gap:20px;
+
+    background-color: #eeecec;
+}
+
+.card{
+    width: 25%;
+    min-width: 290px;
+    height: 450px;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
+
+    overflow: hidden;
+    background-color: #fff;
+
+    transition: all 0.4s;
+    cursor:default;
+    border-radius: 5px;
+    box-shadow:  -6px 2px 32px #cececeb9,
+                6px -2px 32px #f2f2f2bc;
+}
+
+.card-img{ 
+    width: 100%;
+    height: 60%;
+    max-height: 200px;
+
+    object-fit: fill;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.card-img img{ 
+    width: 100%;
+    height: 100%;
+}
+
+.card-title{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color:rgba(15, 15, 15, 0.724);
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+.card-title i{
+    color:rgb(255, 196, 0);
+    border: 2px;
+    cursor:pointer;
+}
+
+h5{
+    width: 100%;
+
+    color:rgba(15, 15, 15, 0.653);
+}
+
+.card-content{
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+
+    color:rgb(52, 52, 52);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.4375rem;
+ 
+    overflow: hidden;
+}
+
+output{
+    width: 100%;
+    padding: 5px 0;
+
+
+    color: rgb(110, 174, 15);
+
+}
+
+
+
+
+/*  media query */
+
+
+
+@media (max-width: 600px){
+    nav{
+        flex-direction: column;  
+    }
+    
+    form.pesquisar{
+        width: 90%;
+        margin: 10px 5px;
+    }
+    
+    form.filtrar{
+        width:auto;
+    }
+
+    .card{
+        width: 80%;
+        max-width: 340px;
+        height: 410px;
+        
+        gap:10px;
+        border-radius: 15px;
+    }
+    
+    .card-title{
+        font-size: 1.3em;
+        font-weight: 600;
+    }  
+    
+    .card-img{ 
+        width: 100%;
+        height: 51%;
+        background-color: inherit;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+        -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+        -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+        align-self: center;
+        object-fit: fill;  
+
+        border-radius: 10px;
+    }
+    
+    .card-img img{ 
+        width: 100%;
+        height: 100%;
+
+        border-radius: 10px;
+    }
+    
+    .card-content{
+        height:auto;
+        font-style: normal;
+        color: rgb(57, 57, 57);
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.4375rem;
+        
+        overflow: hidden;
+    }
+        
+}
+
+
+
+/*  media query */
+
+
+
+@media (min-width: 700px) and (min-height: 1000px){
+
+    .card{
+        width: 40%;
+        max-width: 450px;
+        height: 410px;
+        padding: 10px;
+    
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+    }
+    
+    .card:hover{
+        transform: scale(1.01);
+    }
+    
+    .card-title{
+        font-size: 1.3em;
+        font-weight: 600;
+    }  
+    
+    .card-img{ 
+        width: 100%;
+        height: 51%;
+        background-color: inherit;
+        box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+        -webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+        -moz-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.68);
+        align-self: center;
+        object-fit: fill;  
+      
+
+        border-radius: 10px;
+    }
+    
+    .card-img img{ 
+        width: 100%;
+        height: 100%;
+
+        border-radius: 10px;
+    }
+    
+    .card-content{
+        height: auto;
+        font-style: normal;
+        color: rgb(57, 57, 57);
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.4375rem;
+        
+        overflow: hidden;
+    }
+    
+}
