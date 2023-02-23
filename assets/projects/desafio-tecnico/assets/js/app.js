@@ -82,9 +82,9 @@ const criarAplicacao = (data, acao = '', categoria = '') =>{
             valorDoProduto = valorDoProduto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
             areaDeProdutos.innerHTML += `
-            <article class="card" id="${idDoProduto}">
-                <img class="card-img" src="${imagemDoProduto}"  onclick="abrirProduto(${idDoProduto})">
-                <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto})" id="favorito_${idDoProduto}"></i></h1>
+            <article class="card" id="${idDoProduto}" onclick="abrirProduto(${idDoProduto})">
+                <img class="card-img" src="${imagemDoProduto}" >
+                <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto});event.stopPropagation()" id="favorito_${idDoProduto}"></i></h1>
                 <h5>${categoria}</h5>
                 <p class="card-content">${descCurtaProduto}</p> 
 
@@ -107,9 +107,9 @@ const criarAplicacao = (data, acao = '', categoria = '') =>{
             valorDoProduto = valorDoProduto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
             areaDeProdutos.innerHTML += `
-            <article class="card" id="${idDoProduto}">
-                <img class="card-img" src="${imagemDoProduto}" onclick="abrirProduto(${idDoProduto})">
-                <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto})" id="favorito_${idDoProduto}"></i></h1>
+            <article class="card" id="${idDoProduto}"  onclick="abrirProduto(${idDoProduto})">
+                <img class="card-img" src="${imagemDoProduto}">
+                <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto});event.stopPropagation()" id="favorito_${idDoProduto}"></i></h1>
                 <h5>${categoria}</h5>
                 <p class="card-content">${descCurtaProduto}</p> 
 
@@ -130,9 +130,9 @@ const criarAplicacao = (data, acao = '', categoria = '') =>{
             valorDoProduto = valorDoProduto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
             areaDeProdutos.innerHTML += `
-            <article class="card" id="${idDoProduto}">
-                <img class="card-img" src="${imagemDoProduto}" onclick="abrirProduto(${idDoProduto})">
-                <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto})" id="favorito_${idDoProduto}"></i></h1>
+            <article class="card" id="${idDoProduto}" onclick="abrirProduto(${idDoProduto})">
+                <img class="card-img" src="${imagemDoProduto}">
+                <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto});event.stopPropagation()" id="favorito_${idDoProduto}"></i></h1>
                 <h5>${categoria}</h5>
                 <p class="card-content">${descCurtaProduto}</p> 
 

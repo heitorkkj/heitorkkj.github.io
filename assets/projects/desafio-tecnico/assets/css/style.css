@@ -144,7 +144,6 @@ input[type="checkbox"]:checked::before {
     transform: scale(1);
 }
 
-
 section{
     height: 90%;
     width: 100%;
@@ -162,7 +161,7 @@ section{
 .card{
     width: 25%;
     min-width: 290px;
-    height: 450px;
+    height: auto;
     padding: 10px;
 
     display: flex;
@@ -175,8 +174,7 @@ section{
     background-color: #fff;
 
     transition: all 0.4s;
-    cursor:default;
-    border-radius: 5px;
+    cursor:pointer;
     box-shadow:  -6px 2px 32px #cececeb9,
                 6px -2px 32px #f2f2f2bc;
 }
@@ -270,7 +268,6 @@ output{
         height: 410px;
         
         gap:10px;
-        border-radius: 15px;
     }
     
     .card-title{
