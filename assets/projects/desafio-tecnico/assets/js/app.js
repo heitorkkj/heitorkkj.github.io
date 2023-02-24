@@ -4,7 +4,9 @@ let produtosFavoritados = []
 
 let inputPesquisar = document.getElementById('pesquisar')
 let inputExclusivo = document.getElementById('exclusivo')
+let labelExclusivo = document.getElementById('area-exclusivo')
 let inputPromocao = document.getElementById('promocao')
+let labelPromocao = document.getElementById('area-promocao')
 
 let favorito = 'bi bi-star'
 
@@ -12,10 +14,13 @@ inputPesquisar.oninput = () =>{
     let produtoDigitado = inputPesquisar.value
     produtoDigitado = produtoDigitado.toLowerCase()
     produtoDigitado = produtoDigitado.normalize('NFD').replace(/[\u0300-\u036f]/g, "")
+    produtoDigitado = produtoDigitado.replaceAll('xpto', '')
     produtoDigitado = produtoDigitado.trim()
 
     produtos.forEach(element => {
         let nomeDoProduto = element.nome.toLowerCase()
+        nomeDoProduto = nomeDoProduto.replaceAll('xpto', '')
+        nomeDoProduto = nomeDoProduto.trim()
         nomeDoProduto = nomeDoProduto.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
 
         if(nomeDoProduto == produtoDigitado){
@@ -33,6 +38,7 @@ inputPesquisar.oninput = () =>{
 inputExclusivo.addEventListener( 'change', function() {
 
     if(this.checked) {
+        labelPromocao.style.display = 'none'
         areaDeProdutos.innerHTML = ''
 
         produtos.forEach(element => {            
@@ -42,6 +48,7 @@ inputExclusivo.addEventListener( 'change', function() {
             }
         })
     }else{
+        labelPromocao.style.display = 'flex'
         areaDeProdutos.innerHTML = ''
         criarAplicacao(produtos)
     }
@@ -49,6 +56,7 @@ inputExclusivo.addEventListener( 'change', function() {
 
 inputPromocao.addEventListener( 'change', function() {
     if(this.checked) {
+        labelExclusivo.style.display = 'none'
         areaDeProdutos.innerHTML = ''
 
         produtos.forEach(element => {            
@@ -58,6 +66,7 @@ inputPromocao.addEventListener( 'change', function() {
             }
         })
     }else{
+        labelExclusivo.style.display = 'flex'
         areaDeProdutos.innerHTML = ''
         criarAplicacao(produtos)
     }    
@@ -66,6 +75,8 @@ inputPromocao.addEventListener( 'change', function() {
 const criarAplicacao = (data, acao = '', categoria = '') =>{
 
     if(acao == '' && categoria == ''){
+        labelExclusivo.style.display = 'flex'
+        labelPromocao.style.display = 'flex'
         produtos = data  
 
         produtos.forEach(element => {
@@ -84,11 +95,11 @@ const criarAplicacao = (data, acao = '', categoria = '') =>{
             areaDeProdutos.innerHTML += `
             <article class="card" id="${idDoProduto}" onclick="abrirProduto(${idDoProduto})">
                 <img class="card-img" src="${imagemDoProduto}" >
+                <output>${valorDoProduto}
+                <h5>${categoria}</h5></output>
                 <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto});event.stopPropagation()" id="favorito_${idDoProduto}"></i></h1>
-                <h5>${categoria}</h5>
-                <p class="card-content">${descCurtaProduto}</p> 
 
-                <output>${valorDoProduto}</output>
+                <p class="card-content">${descCurtaProduto}</p> 
             </article>`
         })
     }else if(acao == 'filtro-por-nome' && categoria == ''){
@@ -107,14 +118,15 @@ const criarAplicacao = (data, acao = '', categoria = '') =>{
             valorDoProduto = valorDoProduto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
             areaDeProdutos.innerHTML += `
-            <article class="card" id="${idDoProduto}"  onclick="abrirProduto(${idDoProduto})">
-                <img class="card-img" src="${imagemDoProduto}">
+            <article class="card" id="${idDoProduto}" onclick="abrirProduto(${idDoProduto})">
+                <img class="card-img" src="${imagemDoProduto}" >
+                <output>${valorDoProduto}
+                <h5>${categoria}</h5></output>
                 <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto});event.stopPropagation()" id="favorito_${idDoProduto}"></i></h1>
-                <h5>${categoria}</h5>
-                <p class="card-content">${descCurtaProduto}</p> 
 
-                <output>${valorDoProduto}</output>
+                <p class="card-content">${descCurtaProduto}</p> 
             </article>`
+
     }else if(acao == 'filtro-por-categoria'){
             let produtoFiltrado = data
 
@@ -131,15 +143,18 @@ const criarAplicacao = (data, acao = '', categoria = '') =>{
 
             areaDeProdutos.innerHTML += `
             <article class="card" id="${idDoProduto}" onclick="abrirProduto(${idDoProduto})">
-                <img class="card-img" src="${imagemDoProduto}">
+                <img class="card-img" src="${imagemDoProduto}" >
+                <output>${valorDoProduto}
+                <h5>${categoria}</h5></output>
                 <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto});event.stopPropagation()" id="favorito_${idDoProduto}"></i></h1>
-                <h5>${categoria}</h5>
-                <p class="card-content">${descCurtaProduto}</p> 
 
-                <output>${valorDoProduto}</output>
+                <p class="card-content">${descCurtaProduto}</p> 
             </article>`
     }else if(acao == 'produto-em-destaque'){
         let produtoFiltrado = data
+
+        labelExclusivo.style.display = 'none'
+        labelPromocao.style.display = 'none'
 
         favorito = produtosFavoritados.indexOf(produtoFiltrado.nome) != -1 ? 'bi bi-star-fill' :
         'bi bi-star'
@@ -159,11 +174,11 @@ const criarAplicacao = (data, acao = '', categoria = '') =>{
         <section class="cardDestaque">
             <div class="col-img">
                 <img src="${imagemDoProduto}"/>
-
-                <output>${valorDoProduto}</output>
             </div>
 
             <div class="col-content">
+                <output>${valorDoProduto}
+                <h5>${categoria}</h5></output>
                 <h1 class="card-title" id="nome_${idDoProduto}">${nomeDoProduto} <i class="${favorito}" onclick="favoritar(${idDoProduto})" id="favorito_${idDoProduto}"></i></h1>
 
                 <p class="desc-abrev">
@@ -178,7 +193,7 @@ const criarAplicacao = (data, acao = '', categoria = '') =>{
             </div>
 
             <div class="col-tecnica">
-                <a id="voltarPagina">Voltar à lista</a>
+                <a id="voltarPagina">Voltar à lista <i class="bi bi-window-x"></i></a>
 
                 <ul id="lista-tecnica">
                     <h1>O que você precisa saber</h1>    
@@ -198,7 +213,7 @@ const criarAplicacao = (data, acao = '', categoria = '') =>{
 
         fichaTecnica.forEach(element => {
             areaFichaTecnica.innerHTML += `<li>${element.titulo}: ${element.descricao}` 
-        });
+    });
 }
 
 }
