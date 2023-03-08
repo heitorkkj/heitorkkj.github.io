@@ -1,4 +1,4 @@
-####🤟 Olá! Eu sou Heitor Santos
+<h3>🤟 Olá! Eu sou Heitor Santos</h3>
 
 ❤ Sou apaixonado por tecnologia, ciclismo, estudar, música e com muitas metas para minha vida pessoal e profissional. A programação em minha vida tem um significado muito além de profissão, é uma paixão onde busco me dedicar e me superar a cada vez que toco no teclado.
 
