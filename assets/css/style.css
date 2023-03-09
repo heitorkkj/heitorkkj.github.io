@@ -7,7 +7,7 @@
 }
 
 :root{
-    --background-color: #14131b;
+    --background-color: #292737;
     --color: #e9e5e5;
     --border: 1px solid red;
 }
@@ -16,7 +16,7 @@ body{
     width: 100vw;
     height: 100vh;
 
-    background-color: #14131b; 
+    background-color: #292737; 
     background-image: url('/assets/img/wave.svg');
     background-position: bottom;
     background-repeat: no-repeat;
@@ -24,7 +24,8 @@ body{
 
     scroll-behavior: smooth;   
     color: var(--color);
-    font-family: sans-serif;
+    font-family: museo-sans, sans-serif;
+    font-style: normal;
     overflow-x: hidden;
 }
 
