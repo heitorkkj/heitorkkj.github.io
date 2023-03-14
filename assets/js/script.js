@@ -39,7 +39,7 @@ $(document).ready(() => {
 
 let email = () =>{
     areaEmail = document.getElementById('area-email')
-    areaTexto = document.getElementById("email-texto")
+    areaTexto = document.getElementById('email-texto')
 
     if(areaTexto.innerText == ''){
         areaTexto.innerText = 'heitorsan548@gmail.com'
