@@ -17,8 +17,7 @@ let todosOsProjetosPhp = [
         img:'/assets/projects/php/img/app_lista_tarefas.png',
         titulo:'App Lista Tarefas',
         content:'App para listagem de tarefas.', 
-        //link:'http://app-lista-tarefas.rf.gd/',
-        link:'../projects/php/app_lista_tarefas/index.html',
+        link:'http://app-lista-tarefas.rf.gd/',
         projetoCapa:'sim'
     },
     {
