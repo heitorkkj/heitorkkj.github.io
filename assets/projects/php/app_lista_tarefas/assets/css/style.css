@@ -1,7 +1,8 @@
 *{
     padding: 0; 
     margin: 0;
-    border:0; 
+    border:0;
+	outline: 0; 
 
     list-style: none;
 }
@@ -82,6 +83,14 @@ li.list-group-item button{
 
 	font-size: 1rem;
     font-weight: 400;
+}
+
+li.list-group-item:last-child button{
+	border-radius:0 0 10px 10px;
+}
+
+li.list-group-item:first-child button{
+	border-radius:10px 10px 0 0;
 }
 
 li.list-group-item button:visited,
@@ -202,4 +211,39 @@ fieldset button:hover{
 	letter-spacing:.05rem;
 }
 
+
+
+/* form edit */
+
+.form-edit{
+	width:100%;
+	height:70%;
+
+	display: flex;
+	align-items: center;
+}
+
+.form-control{
+	width: 70%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+
+	border: 1px solid #ced4da;
+	border-radius: 0.24rem 0 0 0.24rem;
+}
+
+.form-edit button{
+	width: 100px;
+	
+	border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0 0.25rem 0.25rem 0;
+
+	color:inherit;
+	background-color:#add8e685;
+	cursor:pointer;
+	transition: all .4s;
+}
 

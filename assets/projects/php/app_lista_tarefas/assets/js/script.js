@@ -1,13 +1,13 @@
 let editar = (id, txtTarefa) => {
     let form = document.createElement("form");
-    form.action = "tarefa_controller.php?acao=atualizar";
+    form.action = "./assets/pages/tasks_controller.php?action=update";
     form.method = "post";
-    form.className = "row";
+    form.className = "form-edit";
 
     let inputTarefa = document.createElement("input");
     inputTarefa.type = "text";
-    inputTarefa.name = "tarefa";
-    inputTarefa.className = "ml-2 col-8 form-control";
+    inputTarefa.name = "task";
+    inputTarefa.className = "form-control";
     inputTarefa.value = txtTarefa;
 
     let inputId = document.createElement("input");
@@ -17,7 +17,6 @@ let editar = (id, txtTarefa) => {
 
     let button = document.createElement("button");
     button.type = "submit";
-    button.className = "col-3 btn btn-info";
     button.innerHTML = "Atualizar";
 
     form.appendChild(inputTarefa);
@@ -31,19 +30,21 @@ let editar = (id, txtTarefa) => {
   };
 
   let remover = (id) => {
-    location.href = "todas_tarefas.php?acao=remover&id=" + id;
+    location.href = "./assets/pages/tasks_controller.php?action=delete&id=" + id;
   };
 
   let realizada = (id) => {
-    location.href = "todas_tarefas.php?acao=realizada&id=" + id;
+    location.href = "./assets/pages/tasks_controller.php?action=realize&id=" + id;
 };
 
+
+// area for http request using jquery
+
+
 $(document).ready(() => {
-	
     $('#new-task').on('click', () =>{
         $('#content').load('assets/pages/new_task.php')
     })
-
 })
 
 let appInit = () =>{
@@ -65,3 +66,11 @@ $(document).ready(() => {
     })
 
 })
+
+
+// area for redirecting from php pages
+
+let url = window.location.href
+url = url.split('?');
+
+

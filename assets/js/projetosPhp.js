@@ -14,7 +14,7 @@ let todosOsProjetosPhp = [
         projetoCapa:'nao'
     },
     {
-        img:'/assets/projects/php/img/app_lista_tarefa.png',
+        img:'/assets/projects/php/img/app_lista_tarefas.png',
         titulo:'App Lista Tarefas',
         content:'App para listagem de tarefas.', 
         link:'http://app-lista-tarefas.rf.gd/',
