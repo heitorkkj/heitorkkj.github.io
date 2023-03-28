@@ -1,0 +1,205 @@
+*{
+    padding: 0; 
+    margin: 0;
+    border:0; 
+
+    list-style: none;
+}
+
+:root {
+    --colorPrimary: #1e1e1e;
+    --colorSecondary: #36454F;
+    --colorHighlight: #ff9500;
+    --colorBackground: #262427;
+    --colorText:#F5F5DC;
+    --colorForm: linear-gradient(
+        90deg,
+        rgb(218, 218, 218) 0%,
+        rgb(255, 255, 255) 100%
+    );
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+
+	background-color: var(--colorBackground);
+	font-family: 'Roboto', sans-serif;
+}
+
+header{
+	width: auto;
+	height: auto;
+	padding:10px 0;
+	
+	display: flex;
+	align-items: center;
+
+	background-color: #1C1C1C;
+	color:var(--colorText);
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+header i{
+	font-size: 1.5em;
+
+	margin: 0 10px 0 70px;
+}
+
+main{
+	width: 90%;
+	height: 60%;
+	margin-top: 30px;
+	margin-left: 70px;
+
+	display: flex;
+	flex: row;
+	gap: 30px;
+}
+
+nav{ 
+	width: 20%;
+}
+
+nav ul.list-group{
+	height: auto;
+
+	display: flex;
+	flex-direction: column;
+}
+
+li.list-group-item button{
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+
+	border:1px solid gray;
+	background-color: #555555;
+	color: var(--colorText);	
+	text-decoration: none;
+	cursor:pointer;
+
+	font-size: 1rem;
+    font-weight: 400;
+}
+
+li.list-group-item button:visited,
+li.list-group-item button:hover{
+	border-color: var(--colorSecondary);
+	border-left: solid 5px var(--colorSecondary);
+}
+
+article{
+	width: 80%;
+	height:auto;
+	padding: 25px;
+
+	border: 1px solid gray;
+	border-radius:5px;
+	overflow-y: scroll;
+}
+
+article::-webkit-scrollbar{
+	overflow: hidden;
+}
+
+article h4.title{
+	font-size:1.5rem;
+	color:#ADD8E6 !important;
+}
+
+div.task-item{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	font-size:1em;
+	color:var(--colorText);
+}
+
+hr{
+	margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.685);
+}
+
+div.task-buttons{
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+}
+
+div.task-buttons i{ 
+	padding: 10px;
+	font-size:1.4rem;
+}
+
+div.task-buttons i:hover{
+	border-radius:10px; 
+	padding: 10px;
+	background-color: rgba(223, 223, 223, 0.433);
+	cursor:pointer;
+}
+
+
+
+/* New tasks pages: style */
+
+form{
+	width:100%;
+	height:70%;
+}
+
+fieldset{
+	width:100%;
+	height:100%;
+
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+
+	color:var(--colorText);
+}
+
+fieldset input{
+	width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+
+	border: 1px solid #ced4da;
+	border-radius: 0.24rem;
+}
+
+fieldset button{
+	width: 100px;
+	
+	border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+
+	color:inherit;
+	background-color:#add8e685;
+	cursor:pointer;
+	transition: all .4s;
+}
+
+fieldset button:hover{
+	background-color: rgba(173, 216, 230, 0.122);
+}
+
+.success-message h5{
+	padding:10px;
+
+	border-radius:0.25rem;
+	background-color: #3F3F3F;
+	color:var(--colorText);
+
+	font-size:1rem;
+	letter-spacing:.05rem;
+}
+
+
