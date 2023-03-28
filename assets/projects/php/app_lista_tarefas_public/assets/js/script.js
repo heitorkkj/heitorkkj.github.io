@@ -46,6 +46,10 @@ $(document).ready(() => {
 
 })
 
+let appInit = () =>{
+    $('#content').load('assets/pages/pendent_tasks.php') 
+}
+
 $(document).ready(() => {
 	
     $('#all-tasks').on('click', () =>{

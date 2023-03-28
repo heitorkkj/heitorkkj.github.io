@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="assets/css/estilo.css" />
   </head>
 
-  <body>
+  <body onload="appInit()">
     <header>
       <i class="bi bi-list-task"></i>
       App Lista Tarefas
