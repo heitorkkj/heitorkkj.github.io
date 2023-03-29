@@ -18,14 +18,14 @@ let todosOsProjetos = [
             titulo:'Simulador de Pandemia',
             content:'Simulador de contaminação da pandemia de Covid-19.', 
             link:'/assets/projects/js/trabalhoFeira/index.html',
-            projetoCapa:'nao'
+            projetoCapa:'sim'
         },
         {
             img:'/assets/img/game-mata-mosquito.png',
             titulo:'Game Mata Mosquito',
             content:'Jogo Mata Mosquito.', 
             link:'/assets/projects/js/mataMosquito-js/index.html',
-            projetoCapa:'sim'
+            projetoCapa:'nao'
         },
         {
             img: '/assets/img/urna-eletronica.png',
