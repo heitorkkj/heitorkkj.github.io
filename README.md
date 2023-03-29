@@ -13,7 +13,7 @@ Seja Bem-Vindo ao meu portifólio, aqui será colocado projetos que tenham valor
 <div>
     <br>
     <a href="https://github.com/heitor548">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=heitor548&layout=compact&langs_count=7&theme=dracula"/>
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=heitorkkj&layout=compact&langs_count=7&theme=dracula"/>
 </div>
 
 
