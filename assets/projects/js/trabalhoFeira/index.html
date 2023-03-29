@@ -1,50 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="js.js"></script>
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
     <title>Feira técnica</title>
-</head>
+  </head>
 
-<body onload="resizeWindow()">
+  <body onload="resizeWindow()">
+    <main>
+      <div
+        id="regions_div"
+        style="width: 70%; height: 100%; display: block"
+      ></div>
 
-    <div class="container">
-        <div id="regions_div" style="width: 70%; height: 95%; padding: 0 25px 0 0;display: block;"></div>
-
-        <div class="caixa">
-            <h1 id="h1-botao" style="text-align:center;">Informações e taxa de contaminação</h1>
-                <div class="cow">
-                    <div class="row-1">
-                        Pandemia covid-19
-                    </div>
-                    <div class="row-2">
-                        <div>A taxa atual de contaminação é de:<div id="taxa"></div></div>
-                    </div>
-                </div>
-
-            <h1 id="h1-botao">Aplique as medidas e comece!</h1>
-
-            <div class="cow-1">
-                <div class="botao-row">
-                    <button class="botao-medidas" onclick="enableMascara()"><img src="imagens/mascara.svg"><div style="width:70%;"><p>Mascara</p></div></button>
-
-                    <button class="botao-medidas" id="btn-distanciamento" onclick="enableDistanciamento()"><img src="imagens/pessoas.svg"><p>Distanciamento social</p></button>
-
-                    <button class="botao-medidas" id="btn-higiene" onclick="enableHigene()"><img src="imagens/higiene.svg"><p>Higiene Básica</p></button>
-                </div>
-                <div class="botao-row-1">
-                    <button class="botao-medidas-1" style="border-radius: 20px;  border:none;" onclick="iniciar()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-playstation" viewBox="0 0 16 16"><path d="M15.858 11.451c-.313.395-1.079.676-1.079.676l-5.696 2.046v-1.509l4.192-1.493c.476-.17.549-.412.162-.538-.386-.127-1.085-.09-1.56.08l-2.794.984v-1.566l.161-.054s.807-.286 1.942-.412c1.135-.125 2.525.017 3.616.43 1.23.39 1.368.962 1.056 1.356ZM9.625 8.883v-3.86c0-.453-.083-.87-.508-.988-.326-.105-.528.198-.528.65v9.664l-2.606-.827V2c1.108.206 2.722.692 3.59.985 2.207.757 2.955 1.7 2.955 3.825 0 2.071-1.278 2.856-2.903 2.072Zm-8.424 3.625C-.061 12.15-.271 11.41.304 10.984c.532-.394 1.436-.69 1.436-.69l3.737-1.33v1.515l-2.69.963c-.474.17-.547.411-.161.538.386.126 1.085.09 1.56-.08l1.29-.469v1.356l-.257.043a8.454 8.454 0 0 1-4.018-.323Z"/></svg>Play</button>
-                
-                    <button class="botao-medidas-1" style="border-radius: 20px; border:none;" onclick="window.location.reload()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-diamond" viewBox="0 0 16 16"><path d="M7.987 16a1.526 1.526 0 0 1-1.07-.448L.45 9.082a1.531 1.531 0 0 1 0-2.165L6.917.45a1.531 1.531 0 0 1 2.166 0l6.469 6.468A1.526 1.526 0 0 1 16 8.013a1.526 1.526 0 0 1-.448 1.07l-6.47 6.469A1.526 1.526 0 0 1 7.988 16zM7.639 1.17 4.766 4.044 8 7.278l3.234-3.234L8.361 1.17a.51.51 0 0 0-.722 0zM8.722 8l3.234 3.234 2.873-2.873c.2-.2.2-.523 0-.722l-2.873-2.873L8.722 8zM8 8.722l-3.234 3.234 2.873 2.873c.2.2.523.2.722 0l2.873-2.873L8 8.722zM7.278 8 4.044 4.766 1.17 7.639a.511.511 0 0 0 0 .722l2.874 2.873L7.278 8z"/></svg>Reset</button>
-                </div>
-            </div>
+      <article>
+        <h1>Informações e taxa de contaminação</h1>
+        <div class="cow">
+          <h4 class="row-1">Pandemia covid-19</h4>
+          <div class="row-2">
+              <h4>A taxa atual de contaminação é de:<br /><span id="taxa"></span></h4>
+          </div>
         </div>
-    </div>
-</body>
 
+        <h1>Aplique as medidas e comece!</h1>
+
+        <section>
+          <div class="btn-column">
+            <button class="btn-actions" onclick="enableMascara()">
+              <img src="assets/images/mascara.svg" />Mascara
+            </button>
+
+            <button class="btn-actions" onclick="enableDistanciamento()">
+                <img src="assets/images/pessoas.svg" />Distanciamento
+            </button>
+
+            <button class="btn-actions"
+            onclick="enableHigene()">
+                <img src="assets/images/higiene.svg" />Higiene
+            </button>
+          </div>
+
+          <div class="btn-column-1">
+            <button
+              class="btn-act"
+              onclick="iniciar()"
+            >
+              <i class="bi bi-playstation">Play</i>
+            </button>
+
+            <button
+              class="btn-act"
+              onclick="window.location.reload()"
+            >
+              <i class="bi bi-x-diamond">Reset</i>
+            </button>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <script type="text/javascript" src="assets/js/script.js"></script>
+  </body>
 </html>

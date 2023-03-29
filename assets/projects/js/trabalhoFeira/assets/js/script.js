@@ -3,11 +3,14 @@
         let altura = window.innerHeight
         let container = document.querySelector('.container')
 
-        if(largura < 1310){
+        if(largura < 780){
             container.innerHTML = ''
             container.innerHTML = `<div class="responsiv"><img src="./imagens/fixing.svg"/>Simulador não disponivel para mobile!</div>`
         }
    }
+
+   let taxa = 3.18
+   taxa = document.getElementById('taxa').innerHTML = taxa.toFixed(2); 
    
    
    google.charts.load('current', {'packages': ['geochart'],/*Note: if your chart requires geocoding or uses nonstandard codes, you'll// need to get a mapsApiKey for your project. The one below won't work.// See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings*/'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'});google.charts.load('current', {'packages': ['geochart'],});google.charts.setOnLoadCallback(drawRegionsMap);
@@ -33,7 +36,6 @@
     var mln = calculaPessoas('mln');
     var pln = calculaPessoas('pln');
     var mcn = calculaPessoas('mcn');
-    var taxa = 3.18;
 
     function popSaudavel(total, taxa){
 
@@ -99,8 +101,6 @@
             ['057', mcn = Math.round(popSaudavel(mcn,taxa))],
             ['061', pln = Math.round(popSaudavel(pln,taxa))]
           ]);
-
-        document.getElementById('taxa').innerHTML= taxa.toFixed(2); 
 
         
         

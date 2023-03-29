@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.taxa {
+    width: 4%;
+}
+
+article{
+    width: 25%;
+    height: 97%;
+    margin-left: 2%;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align:center;
+
+    border-radius:10px;
+    color:#edf1f4;
+    background-color: rgba( 255, 255, 255, 0.25 );
+}
+
+.cow,
+section {
+    width: 90%;
+    height: 325px;
+
+    border-radius: 10px;
+    padding:5px 0;
+
+    display: flex;
+    flex-direction: column;   
+    text-align: center;
+}
+
+.row-1,
+.row-2{
+    align-self: center;
+    width: 95%;
+    height: 125px;
+    margin-top: 10px;
+    background: rgba( 255, 255, 255, 0.15 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    color: white;
+}
+
+.taxa{
+    margin-top: 10px;
+    margin-left: 50%;
+    color:white;
+    font-weight: 700;
+}
+ 
+section{
+    display:flex; 
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-actions,
+.btn-act{
+    width: 80%;
+    height: auto;
+
+    padding: 5px;
+    margin:15px;
+    font-size: 1em;
+    border-radius:5px;
+    border:none;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.btn-actions:hover,
+.btn-act:hover{
+    background:linear-gradient(to bottom, rgb(211, 211, 211) 5%, #bebcb5 100%);
+    box-shadow: 1px 1px 1px 1px rgb(136, 136, 136);
+	background-color:#ccc2a6;
+}
+
+.btn-actions:active,
+.btn-act:active {
+	position:relative;
+	top:1px;
+}
+
+.btn-act{
+    width: 80%;
+    border-radius:10px;
+    padding-inline: 10px;
+}
+
+.btn-act i{
+    display:flex;
+    gap:10px;
+}
+
+img{
+    width: 30%;
+    height: 26px; 
+    margin-right: 10px; 
+}
+ 
