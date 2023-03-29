@@ -18,8 +18,8 @@
     <title>Feira técnica</title>
   </head>
 
-  <body onload="resizeWindow()">
-    <main>
+  <body onresize="resizeWindow()">
+    <main id="main">
       <div
         id="regions_div"
         style="width: 70%; height: 100%; display: block"
@@ -38,16 +38,16 @@
 
         <section>
           <div class="btn-column">
-            <button class="btn-actions" onclick="enableMascara()">
+            <button class="btn-actions" onclick="enableAction('mascara')">
               <img src="assets/images/mascara.svg" />Mascara
             </button>
 
-            <button class="btn-actions" onclick="enableDistanciamento()">
+            <button class="btn-actions" onclick="enableAction('distanciamento')">
                 <img src="assets/images/pessoas.svg" />Distanciamento
             </button>
 
             <button class="btn-actions"
-            onclick="enableHigene()">
+            onclick="enableAction('higiene')">
                 <img src="assets/images/higiene.svg" />Higiene
             </button>
           </div>
