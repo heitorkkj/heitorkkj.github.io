@@ -17,6 +17,7 @@ let popSaudavel = (total, rate) =>{
 
     var contam = 1000000*rate; 
     total = total - contam;
+    
     if(total <= 0){
         total = 0
         return total

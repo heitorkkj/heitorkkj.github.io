@@ -52,7 +52,7 @@ function calculaPessoas(id) {
       'sas': 1991790803,
       'seas': 683989726,
       'was': 313428000,
-
+ 
       'anz': 31102625,
       'mln': 11595122,
       'mcn': 116255,
@@ -61,10 +61,10 @@ function calculaPessoas(id) {
     return Math.round(pessoas[id])
 }
 
-function iniciar() {
-  window.setInterval(drawRegionsMap, 1000);
+let start = () => {
+  window.setInterval(drawRegionsMap, 2000);
 }
-//window.setInterval(drawRegionsMap,3000)
+
 function drawRegionsMap() {
   var data = google.visualization.arrayToDataTable([
     ["Country", "População Saudavel"],
