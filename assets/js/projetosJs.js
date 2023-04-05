@@ -3,7 +3,7 @@ let todosOsProjetos = [
             img:'/assets/img/app-orcamento-pessoal.png',
             titulo:'App Orçamento Pessoal',
             content:'Aplicação para controle de gastos e orçamentos pessoais.', 
-            link:'/assets/projects/js/App_Orçamento_pessoal/index.html',
+            link:'https://heitorkkj.github.io/App_orcamento_pessoal/',
             projetoCapa:'sim'
         },
         {
