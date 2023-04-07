@@ -49,3 +49,4 @@ let email = () =>{
 $(document).ready(() =>{
     $('#cards').html('<section class="cards" id="projetos-capa">');
 });
+

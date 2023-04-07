@@ -25,12 +25,14 @@ const pagesFile = {
 };
 
 
+
 const recuperarCard = (linguagem) =>{
     const currentProjects = pagesFile.allProjects[linguagem];        
     const cardsCapa = document.getElementById('projetos-capa');
     const fragment = document.createDocumentFragment();
 
     cardsCapa.innerHTML= '';
+
 
     currentProjects.forEach(element => {
         const card = {
@@ -47,26 +49,32 @@ const recuperarCard = (linguagem) =>{
 
         const img = document.createElement('img');
         img.className = 'card-img';
-        img.src = card.img;
-        section.appendChild(img); 
-        
+        img.loading = 'lazy';
+        section.appendChild(img);
+
         const h1 = document.createElement('h1');
-        h1.className = 'card-tilte';
-        h1.textContent = card.title;
+        h1.className = 'card-title';
         section.appendChild(h1);
 
         const p = document.createElement('p');
         p.className = 'card-content';
-        p.textContent = card.content;
         section.appendChild(p);
 
         const btnLink = document.createElement('button');
         btnLink.className = 'btn-link';
         btnLink.textContent = 'Visitar';
-        btnLink.addEventListener('click', () => visit(card.link));
         section.appendChild(btnLink);
 
+
         if(element.projectShow == 'sim'){
+
+            img.src = card.img;
+            h1.textContent = card.title;
+            p.textContent = card.content;
+
+            btnLink.addEventListener('click', () => visit(card.link));
+
+
             fragment.appendChild(section);
             cardsCapa.appendChild(fragment); 
         }
