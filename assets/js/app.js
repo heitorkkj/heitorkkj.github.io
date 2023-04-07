@@ -1,12 +1,12 @@
 $(document).ready(() => {
-    $('#linguagem-php').on('click', () =>{
-        $('#cards').load(recuperarCard('php'));
-    })
-});
-
-$(document).ready(() => {
     $('#linguagem-js').on('click', () =>{
+        $('#cards').html('<section class="cards" id="projetos-capa">');
         $('#cards').load(recuperarCard('js'));
+    })
+
+    $('#linguagem-php').on('click', () =>{
+        $('#cards').html('<section class="cards" id="projetos-capa">');
+        $('#cards').load(recuperarCard('php'));
     })
 });
 
@@ -24,15 +24,12 @@ const pagesFile = {
     allProjects: projects
 };
 
-
-
 const recuperarCard = (linguagem) =>{
     const currentProjects = pagesFile.allProjects[linguagem];        
     const cardsCapa = document.getElementById('projetos-capa');
     const fragment = document.createDocumentFragment();
 
-    cardsCapa.innerHTML= '';
-
+    cardsCapa.innerHTML= '';    
 
     currentProjects.forEach(element => {
         const card = {
@@ -42,6 +39,8 @@ const recuperarCard = (linguagem) =>{
             link: element.link,
             projectShow:element.projectShow
         }
+
+        console.log(card)
 
         const section = document.createElement('section');
         section.className = 'card';

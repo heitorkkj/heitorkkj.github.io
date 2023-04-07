@@ -41,11 +41,34 @@ const projects = {
             content:'Relogio Digital de acordo com o horario oficial brasileiro.', 
             link:'/assets/projects/js/relogio digital/index (2).html',
             projectShow:'nao'
-        }
-    ],
-    'php':[
+        }],
+
+    'php':[{
+            img:'/assets/projects/php/img/app_help_desk.png',
+            title:'App Help Desk',
+            content:'Web aplicação para abertura e controle de chamados.', 
+            link:'nenhum',
+           projectShow:'sim'
+        },
         {
-
-
-    }]
+            img:'/assets/projects/php/img/app_send_mail.png',
+            title:'App Send Mail',
+            content:'Aplicação para enviar email de forma mais simples.', 
+            link:'nenhum',
+           projectShow:'nao'
+        },
+        {
+            img:'/assets/projects/php/img/app_lista_tarefas.png',
+            title:'App Lista Tarefas',
+            content:'App para listagem de tarefas.', 
+            link:'http://app-lista-tarefas.rf.gd/',
+           projectShow:'sim'
+        },
+        {
+            img:'/assets/projects/php/img/app_send_file.png',
+            title:'App Send File',
+            content:'Web aplicação para envio de arquivos por email.', 
+            link:'http://sendfile.rf.gd/',
+           projectShow:'sim'
+        }],
 };
