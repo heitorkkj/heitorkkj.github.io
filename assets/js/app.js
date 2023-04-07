@@ -40,8 +40,6 @@ const recuperarCard = (linguagem) =>{
             projectShow:element.projectShow
         }
 
-        console.log(card)
-
         const section = document.createElement('section');
         section.className = 'card';
         section.id = 'card-js';
@@ -72,7 +70,6 @@ const recuperarCard = (linguagem) =>{
             p.textContent = card.content;
 
             btnLink.addEventListener('click', () => visit(card.link));
-
 
             fragment.appendChild(section);
             cardsCapa.appendChild(fragment); 
