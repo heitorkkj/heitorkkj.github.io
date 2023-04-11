@@ -11,8 +11,6 @@ let irPara = (local) =>{
 let container = document.getElementById('projetos')
 container.innerHTML = ''
 
-let quantidadeDeProjetos = todosOsProjetos.length
-
 let card = {
     img: '',
     titulo: '',
@@ -20,11 +18,11 @@ let card = {
     link:''
 }
 
-for(let count = 0; count<=quantidadeDeProjetos; count++){
-    card.img = todosOsProjetos[count].img
-    card.titulo = todosOsProjetos[count].titulo
-    card.content = todosOsProjetos[count].content
-    card.link = todosOsProjetos[count].link
+projects['js'].map(element =>{
+    card.img = element.img
+    card.titulo = element.title
+    card.content = element.content
+    card.link = element.link
 
     container.innerHTML += ` 
     <div class="card" id="card-js">
@@ -40,5 +38,4 @@ for(let count = 0; count<=quantidadeDeProjetos; count++){
         <button class="btn-link" onclick="irPara('${card.link}')">Visitar
         </button>
     </div>`
-
-}
+})
