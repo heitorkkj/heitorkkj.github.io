@@ -1,0 +1,80 @@
+
+
+section#area-sobre{
+    width: 100vw;
+    height: 90vh;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article#sobre{
+   width: 50%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+}
+
+article#sobre h1, 
+article#sobre h2,
+article#sobre h3{
+   margin-left: 25%;
+   font-weight: 100;
+   transition: all 0.8s;
+   transition-duration: 1s;
+   transition-timing-function: linear;
+}
+
+article#sobre h1{
+   color:#db44fd;
+   padding-top: 10px;
+   padding-bottom:30px;
+}
+
+article#sobre h3{ 
+   color:#db44fd;
+}
+
+section#area-sobre aside{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+aside img{
+   width: 65%;
+   height: 65%;
+}
+
+@media (max-width: 600px){
+    article#sobre{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    article#sobre h1, 
+    article#sobre h2,
+    article#sobre h3{
+    margin-left: 30px;
+    }
+
+    section#area-sobre aside img{
+        display: none;
+    }
+
+    article#sobre h3{ 
+        font-size: 0.9em;
+        color:#db44fd;
+    }
+}
+

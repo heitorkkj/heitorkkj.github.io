@@ -1,27 +1,3 @@
-let ola = ['Hello welcome!👋','Hola es bienvenido!👋','Olá seja bem-vindo!👋']
-let count = 0
-
-meuIntervalo = setInterval(()=>{
-    apresentacao = document.getElementById('bemVindo') 
-    apresentacao.innerHTML = ola[count]
-    if(ola[count] === 'Olá seja bem-vindo!👋'){
-        clearInterval(meuIntervalo);
-    }else{
-        count++
-    }
-}, 1500)
-
-let curtir = () =>{
-    heart = document.getElementById('heart'); 
-
-    if(heart.className === 'bi bi-heart'){
-        heart.className += '-fill'
-        heart.innerHTML = '1'
-    }else{
-        heart.className = 'bi bi-heart'
-        heart.innerHTML = ''
-    }
-}
 
 $(document).ready(() => {
     $('#btn-sobre').on('click', () =>{
@@ -30,7 +6,7 @@ $(document).ready(() => {
 })
 
 let abrirMenu = () => {
-    menu = document.getElementById('menu-principal')
+    menu = document.getElementById('navbar-menu')
 
     menu.className = menu.className == '' ? 'active' : ''    
 }

@@ -8,6 +8,10 @@ $(document).ready(() => {
         $('#cards').html('<section class="cards" id="projetos-capa">');
         $('#cards').load(recuperarCard('php'));
     })
+
+
+    $('#home-header').load('/src/assets/components/home/navbar.html');
+    $('#home-about').load('/src/assets/components/home/articleAbout.html');
 });
 
 const visit = (local) =>{
