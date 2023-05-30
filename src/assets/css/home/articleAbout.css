@@ -5,7 +5,7 @@ article.wrapper{
     display:flex;
 }
 
-article#sobre{
+article#about{
    width: 50%;
    height: 80%;
 
@@ -17,24 +17,23 @@ article#sobre{
 
 }
 
-article#sobre span{
+article#about span{
     color:#b6afaf;
     font-weight: 600;
     font-size: 1.3em;
     font-family:sans-serif;
 }
 
-article#sobre h1{
-    font-family: 'Spectral';
-    font-weight: 600;
-    font-size: 60px;
+article#about h1{
+    font-weight: 700;
+    font-size: 4rem;
     letter-spacing: 0.03em;
-    line-height: 0.9;
+    line-height: 1em;
 
     cursor:pointer;
 }
 
-article#sobre button{
+article#about button{
     padding:.8rem 4rem;
     margin-top:25px;
 
@@ -48,17 +47,17 @@ article#sobre button{
     cursor:pointer;
 }
 
-article#sobre button:hover{
+article#about button:hover{
     opacity: .6;
 }
 
-article#sobre button a{
+article#about button a{
     width: 100%;
     color: inherit;
     text-decoration: none;
 }
 
-aside{
+aside#about-img{
     width: 35%;
     height: 75%;
     margin: 5% 0 0 0;
@@ -67,80 +66,112 @@ aside{
     align-items: center;
     justify-content: center;
 
+    position:relative;
     background-color:rgba(255, 255, 255, 0.089);
-    box-shadow: 0px .1px 2px rgb(255, 255, 255);
     border-radius:.2rem .2rem .2rem 8rem;
 }
 
-aside img{
+aside#about-img img{
     width: 350px;
 }
 
+section#about-me{
+    width: 80%;
+    height: fit-content;
+    padding:var(--padding);
+}
+
+section#about-me h1{
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 0.03em;
+    line-height: 1.6em;
+
+    cursor:pointer;
+}
+
+section#about-me span{
+    color:#b6afaf;
+    font-weight: 500;
+    font-size: 1.2em;
+    
+    text-align: justify;
+}
+
+section#about-me hr{
+    width: 350px;
+    border:1px solid #FFF;
+
+    position: absolute;
+    right:0;
+    top:140%;
+    transform: rotate(90deg);
+
+    animation: hrMove 2s ease-in-out infinite forwards;
+}
+
+@keyframes hrMove{
+    0%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 @media (max-width:1110px){
-    div.area-sobre{
-        left:30px;
+    article#about h1{
+        font-size:3rem;
     }
 
-    div.img{
-        height: 60vh;
+    aside#about-img img{
+        width: 90%;
     }
 
-    div.img img{
-        width: 300px;
-        height: 300px;
+    section#about-me h1{
+        font-size:2.5rem;
+    }
+
+    section#about-me hr{
+        width: 250px;
+        top:130%;
     }
 }
 
 @media (max-width:940px){
-
-    h1{
+    article#about h1{
         font-size:2.5rem;    
     }
 
-    div.img img{
-        width: 250px;
-        height: 250px;
+    section#about-me hr{
+        width: 200px;
+        top:130%;
     }
 
-    div.area-sobre hr{
-        left:70%;
+    section#about-me span{
+        font-size:1.1em;
     }
 }
 
-@media (max-width:600px){
-
-    article#sobre{
+@media (max-width:745px){
+    article#about{
         width:90%;
-        height: 90vh;
     }
 
-    h1{
-        font-size:40px;    
-    }
-
-    div.img{
+    aside#about-img{
         display: none;
     }
 
-    div.area-sobre{
-        margin-left: 30px;
-        width: 80%; 
-        text-align:justify;
-        padding:0;
+    section#about-me hr{
+        display: none;
     }
+}
 
-    div.area-sobre span{
-        font-size:1em;
-    }
-
-    div.area-sobre hr{
-        width: 350px;
-
-        left:50%;
-        top:115%;
-    }
-
-    aside img{
-        display:none;
+@media (max-width:425px){
+    article#about h1{
+        font-size:2rem;    
     }
 }
