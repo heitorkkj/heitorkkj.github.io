@@ -1,0 +1,79 @@
+
+section.about-me{
+    width: 80%;
+    height: 100%;
+    padding:var(--padding);
+}
+
+section.about-me h1{
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 0.03em;
+    line-height: 1.6em;
+
+    cursor:pointer;
+}
+
+section.about-me span{
+    color:#b6afaf;
+    font-weight: 500;
+    font-size: 1.2em;
+    
+    text-align: justify;
+}
+
+section.about-me hr{
+    width: 350px;
+    border:1px solid #FFF;
+
+    position: absolute;
+    right:0;
+    top:140%;
+    transform: rotate(90deg);
+
+    animation: hrMove 2s ease-in-out infinite forwards;
+}
+
+@keyframes hrMove{
+    0%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media (max-width:1110px){
+
+    section.about-me h1{
+        font-size:2.5rem;
+    }
+
+    section.about-me hr{
+        width: 250px;
+        top:130%;
+    }
+}
+
+@media (max-width:940px){
+
+    section.about-me hr{
+        width: 200px;
+        top:130%;
+    }
+
+    section.about-me span{
+        font-size:1.1em;
+    }
+}
+
+@media (max-width:745px){
+
+    section.about-me hr{
+        display: none;
+    }
+}
+

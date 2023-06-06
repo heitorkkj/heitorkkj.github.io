@@ -1,8 +1,10 @@
-article.wrapper{
-    width: inherit;
-    height: inherit;
+article.wrapper-about{
+    width: 100%;
+    height: 100%;
 
     display:flex;
+    flex-direction: row;
+    color: var(--color-text);
 }
 
 article#about{
@@ -14,7 +16,6 @@ article#about{
    align-items: flex-start;
    justify-content: center;
    padding: var(--padding);
-
 }
 
 article#about span{
@@ -75,52 +76,6 @@ aside#about-img img{
     width: 350px;
 }
 
-section#about-me{
-    width: 80%;
-    height: fit-content;
-    padding:var(--padding);
-}
-
-section#about-me h1{
-    font-weight: 700;
-    font-size: 3rem;
-    letter-spacing: 0.03em;
-    line-height: 1.6em;
-
-    cursor:pointer;
-}
-
-section#about-me span{
-    color:#b6afaf;
-    font-weight: 500;
-    font-size: 1.2em;
-    
-    text-align: justify;
-}
-
-section#about-me hr{
-    width: 350px;
-    border:1px solid #FFF;
-
-    position: absolute;
-    right:0;
-    top:140%;
-    transform: rotate(90deg);
-
-    animation: hrMove 2s ease-in-out infinite forwards;
-}
-
-@keyframes hrMove{
-    0%{
-        opacity: 0.2;
-    }
-    50%{
-        opacity:0.5;
-    }
-    100%{
-        opacity: 1;
-    }
-}
 
 @media (max-width:1110px){
     article#about h1{
@@ -131,11 +86,11 @@ section#about-me hr{
         width: 90%;
     }
 
-    section#about-me h1{
+    section.about-me h1{
         font-size:2.5rem;
     }
 
-    section#about-me hr{
+    section.about-me hr{
         width: 250px;
         top:130%;
     }
@@ -146,12 +101,12 @@ section#about-me hr{
         font-size:2.5rem;    
     }
 
-    section#about-me hr{
+    section.about-me hr{
         width: 200px;
         top:130%;
     }
 
-    section#about-me span{
+    section.about-me span{
         font-size:1.1em;
     }
 }
@@ -165,7 +120,7 @@ section#about-me hr{
         display: none;
     }
 
-    section#about-me hr{
+    section.about-me hr{
         display: none;
     }
 }
