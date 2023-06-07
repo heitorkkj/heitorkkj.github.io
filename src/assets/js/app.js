@@ -10,10 +10,10 @@ $(document).ready(() => {
     })
 
 
-    $('#home-header').load('/src/assets/components/home/navbar.html');
-    $('#home-about').load('/src/assets/components/home/articleAbout.html');
-    $('#home-about-me').load('/src/assets/components/home/articleAboutMe.html');
-    $('#home-projects').load('/src/assets/components/home/articleProjects.html');
+    $('#home-header').load('/src/assets/components/home/header/navbar.html');
+    $('#home-about').load('/src/assets/components/home/about-me/articleAbout.html');
+    $('#home-about-me').load('/src/assets/components/home/about-me/articleAboutMe.html');
+    $('#home-projects').load('/src/assets/components/home/portfolio/articleProjects.html');
 });
 
 const visit = (local) =>{

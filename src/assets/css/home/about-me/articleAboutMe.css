@@ -72,6 +72,10 @@ section.about-me hr{
 
 @media (max-width:745px){
 
+    section.about-me{
+        padding:var(--padding-left);
+    }
+
     section.about-me hr{
         display: none;
     }

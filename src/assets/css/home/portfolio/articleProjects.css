@@ -1,4 +1,209 @@
 article.projects-wrapper{
-    border:1px solid red;
     height: 100%;
+}
+
+section.projects-title{
+    width: 100%;
+    padding:1rem 0;
+
+    text-align:center;
+    cursor:pointer;
+}
+
+section.projects-title h1{
+    font-size: 2em;
+    line-height: 1.9em;
+    text-transform: uppercase;
+}
+
+section.projects-title h2{
+    font-size: 1em;
+    color: rgb(154, 84, 238);
+    transition: all 0.4s ease 0s;
+}
+
+section.projects-title h2:hover{
+    color:rgb(177, 121, 245);
+}   
+
+section.projects{
+    width: 100%;
+    margin:2rem 0;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+article.project{
+    width:100%;
+    height: 80vh;
+    padding:0 30px;
+
+    display:flex;
+    align-items:center;
+    color:var(--color-text);
+}
+
+div.project-details{
+    width: 50%;
+    height: 100%;
+
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    gap:10px;
+}
+
+h1.title{
+    text-transform: uppercase;
+    color:  #9a54ee;
+    font-size:2rem;
+    font-weight: 100;
+}
+
+h2.sub-title{
+    font-size:1.7em;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+p.content{
+    width:90%;
+
+    text-align: justify;
+    color:#ffffff94;
+    font-size:.9rem;
+}
+
+button.btn-project{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+
+    font-size:1rem;
+
+    text-align: start;
+    background-color: inherit;
+    color:inherit;
+}
+
+button.btn-project a{
+    width: auto;
+    display:flex;
+    align-items: center;
+    gap:20px;
+
+    color:inherit;
+    font-size: 0.8em;
+
+    text-decoration:none;
+    transition: all .4s;
+}
+
+button.btn-project a:hover{
+    color:#929292;
+    text-decoration:none;
+}
+
+div.project-image{
+    width:50%;
+    height: 100%;
+
+    display:flex;
+    align-items:center;
+    position: relative;
+}
+
+div.moldura-image{
+    width:75%;
+    height: 80%;
+    border:7px solid  #9a54ee;
+    border-radius:10px;
+
+    position: relative;
+    z-index:0;
+}
+
+div.project-image img{
+    width:450px;
+    height: 320px;
+
+    position: absolute;
+    z-index:10;
+    top:20px;
+    left: 7%;
+    border-radius:10px;
+    background-color: #f9f9f955;
+
+    object-fit: contain;
+}
+
+@media (max-width:600px){
+
+    section.projects{        
+        margin:3rem 0;
+        gap:2rem;
+    }
+
+    article.project{
+        height:100vh;
+        padding:0;
+
+        display:flex;
+        flex-direction: column !important;
+        align-items: flex-start;
+    
+        position:relative;
+    }
+
+    div.project-details{
+        width:80%;
+        height: 40%;
+        padding:0;
+
+        justify-content:flex-start;
+        gap:10px;
+    }
+
+    h1.title,
+    h2.sub-title,
+    p.content,
+    button.btn-project{
+        padding-left:1.4rem;
+    }
+
+    h1.title{
+        font-size:1.6rem;
+    }
+
+    h2.sub-title{
+        font-size:1.2rem;
+    }
+
+    p.content{
+        width:100%;
+    }
+
+    div.project-image{
+        width: 100%;
+        height: 60%;
+    }
+
+    div.moldura-image{
+        width:80%;
+        height: 50%;
+
+        margin:var(--padding-left);
+    }
+
+    div.project-image img{
+        width:70%;
+        height: 220px;
+        
+        left:9%;
+        top:40px;
+
+        object-fit: fill;
+        background-color: transparent;
+    }
 }
