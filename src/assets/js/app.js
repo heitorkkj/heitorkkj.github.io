@@ -14,6 +14,7 @@ $(document).ready(() => {
     $('#home-about').load('/src/assets/components/home/about-me/articleAbout.html');
     $('#home-about-me').load('/src/assets/components/home/about-me/articleAboutMe.html');
     $('#home-projects').load('/src/assets/components/home/portfolio/articleProjects.html');
+    $('#home-footer').load('/src/assets/components/home/footer/footer.html');
 });
 
 const visit = (local) =>{
@@ -89,3 +90,4 @@ const recuperarCard = (linguagem) =>{
     btnVerTodos.addEventListener('click', () => visit(`/assets/projects/${linguagem}/index.html`));
     cardsCapa.appendChild(btnVerTodos);
 }
+

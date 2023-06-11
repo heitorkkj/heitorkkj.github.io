@@ -10,7 +10,7 @@ nav{
     justify-content: space-between;
 }
 
-nav span{
+span.logo{
     padding:var(--padding);
 
     font-size: 1.7rem;
